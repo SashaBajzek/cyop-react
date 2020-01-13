@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.Footer {
+  background-color: $rainbow-teal;
+  width: 100%;
+
+  &__copyright,
+  &__link {
+    color: $black;
+  }
+
+  &__copyright {
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

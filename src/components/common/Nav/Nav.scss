@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+Nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+  &__button {
+    border: 1px solid $rainbow-orange;
+  }
+}

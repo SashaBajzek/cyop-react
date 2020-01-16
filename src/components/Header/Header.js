@@ -5,7 +5,7 @@ import "./Header.scss";
 const Header = props => (
   <header>
     <Link to="/">
-      <h1>Create Your Own Presentation: React</h1>
+      <h1>Choose Your Own Presentation: React</h1>
     </Link>
   </header>
 );

@@ -2,28 +2,42 @@ import React from "react";
 import { VoteButton } from "components";
 import { Nav } from "components";
 import votingBallots from "../../fixtures/voting";
+import "./VotePage.scss";
 
 class VotePage extends React.Component {
   state = {
+    resultPercentages: [],
     winningOption: null
   };
+
+  collectVotes = () => {
+    this.setState({ resultPercentages: [66, 33, 0], winningOption: 0 });
+  };
+
   render() {
     const { displayNav, id } = this.props;
-    const { winningOption } = this.state;
+    const { resultPercentages, winningOption } = this.state;
     const { options, question } = votingBallots[id];
     return (
       <>
         <h2>{question}</h2>
-        <ul>
-          {options.map(option => (
-            <li key={option}>
-              <VoteButton text={option} />
-            </li>
+        {winningOption === null ? (
+          <button onClick={this.collectVotes}>Collect Votes</button>
+        ) : null}
+        <form className="VotePage__form">
+          {options.map((option, index) => (
+            <VoteButton
+              disable={winningOption !== null}
+              key={option}
+              result={winningOption !== null ? resultPercentages[index] : null}
+              text={option}
+              winner={option === options[winningOption]}
+            />
           ))}
-        </ul>
+        </form>
         <Nav
-          display={displayNav && winningOption}
-          nextOptionalText={`: ${winningOption}`}
+          display={displayNav && winningOption !== null}
+          nextOptionalText={`: ${options[winningOption]}`}
         />
       </>
     );

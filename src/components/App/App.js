@@ -4,11 +4,12 @@ import "./App.scss";
 import { Footer, Header } from "components";
 import { HomePage, TeachPage, VotePage } from "pages";
 
+const ThemeContext = React.createContext("default");
+
 class App extends React.Component {
   state = {
     currentPage: 1,
     presentationMode: true,
-    theme: "default",
     userType: "presenter"
   };
 
@@ -20,15 +21,20 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <div className="App">
-          <Header />
-          <Router>
-            <HomePage displayNav={this.navShouldDisplay()} path="/" />
-            <TeachPage displayNav={this.navShouldDisplay()} path="/teach/:id" />
-            <VotePage displayNav={this.navShouldDisplay()} path="/vote/:id" />
-          </Router>
-          <Footer />
-        </div>
+        <ThemeContext.Provider value="default">
+          <div className="App">
+            <Header />
+            <Router>
+              <HomePage displayNav={this.navShouldDisplay()} path="/" />
+              <TeachPage
+                displayNav={this.navShouldDisplay()}
+                path="/teach/:id"
+              />
+              <VotePage displayNav={this.navShouldDisplay()} path="/vote/:id" />
+            </Router>
+            <Footer />
+          </div>
+        </ThemeContext.Provider>
       </React.StrictMode>
     );
   }

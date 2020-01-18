@@ -1,7 +1,6 @@
 import React from "react";
-import { VoteButton } from "components";
-import { Nav } from "components";
-import votingBallots from "../../fixtures/voting";
+import { Nav, VoteButton } from "components";
+import pages from "../../fixtures/toc";
 import "./VotePage.scss";
 
 class VotePage extends React.Component {
@@ -14,10 +13,26 @@ class VotePage extends React.Component {
     this.setState({ resultPercentages: [66, 33, 0], winningOption: 0 });
   };
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.id !== this.props.id) {
+      this.setState({
+        resultPercentages: [],
+        winningOption: null
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      resultPercentages: [],
+      winningOption: null
+    });
+  }
+
   render() {
     const { displayNav, id } = this.props;
     const { resultPercentages, winningOption } = this.state;
-    const { options, question } = votingBallots[id];
+    const { nextUrl, options, question } = pages[id];
     return (
       <>
         <h2>{question}</h2>
@@ -38,6 +53,7 @@ class VotePage extends React.Component {
         <Nav
           display={displayNav && winningOption !== null}
           nextOptionalText={`: ${options[winningOption]}`}
+          nextUrl={nextUrl}
         />
       </>
     );

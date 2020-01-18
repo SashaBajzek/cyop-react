@@ -1,10 +1,8 @@
 import React from "react";
-import { Nav } from "components";
+import { TeachPage } from "pages";
 
-const TeachPage = ({ displayNav }) => (
-  <>
-    HomePage Welcome! <Nav display={displayNav} />
-  </>
+const HomePage = ({ displayNav }) => (
+  <TeachPage displayNav={displayNav} id="home" />
 );
 
-export default TeachPage;
+export default HomePage;

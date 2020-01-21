@@ -2,16 +2,27 @@ import React from "react";
 import { Router } from "@reach/router";
 import "./App.scss";
 import { Footer, Header } from "components";
+import { ThemeContext } from "context";
 import { HomePage, TeachPage, VotePage } from "pages";
 
-const ThemeContext = React.createContext("default");
-
 class App extends React.Component {
-  state = {
-    currentPage: 1,
-    presentationMode: true,
-    userType: "presenter"
-  };
+  constructor(props) {
+    super(props);
+
+    this.setTheme = theme => {
+      this.setState({
+        theme: theme
+      });
+    };
+
+    this.state = {
+      currentPage: 1,
+      presentationMode: true,
+      setTheme: this.setTheme,
+      theme: "rainbow",
+      userType: "presenter"
+    };
+  }
 
   navShouldDisplay = () => {
     const { presentationMode, userType } = this.state;
@@ -19,9 +30,10 @@ class App extends React.Component {
   };
 
   render() {
+    const { setTheme, theme } = this.state;
     return (
       <React.StrictMode>
-        <ThemeContext.Provider value="default">
+        <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className="App">
             <Header />
             <Router>

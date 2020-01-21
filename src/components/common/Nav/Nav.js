@@ -4,9 +4,9 @@ import "./Nav.scss";
 
 const Nav = ({ display, nextOptionalText = "", nextUrl = "/" }) => {
   return display ? (
-    <nav className="App__nav">
+    <nav className="Nav">
       <button onClick={() => window.history.back()}>Previous</button>
-      <Link to={nextUrl} className="App__button">
+      <Link to={nextUrl} className="Nav__button">
         Next{nextOptionalText}
       </Link>
     </nav>

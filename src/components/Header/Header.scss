@@ -1,12 +1,29 @@
 @import '../../styles/variables.scss';
 
-header {
+.Header {
   a {
     text-decoration: none;
   }
 
-  h1 {
-    color: $rainbow-magenta;
+  &__heading {
     text-align: center;
+
+    &--rainbow {
+      color: $rainbow-magenta;
+    }
+
+    &--shoreline {
+      color: $shoreline-teal;
+    }
+
+    &--nobility {
+      color: $nobility-royalty;
+    }
+
+    &--beach {
+      color: $beach-sunburst;
+    }
+
   }
+
 }

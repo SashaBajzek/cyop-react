@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -9,4 +11,26 @@
   height: 100vh;
   justify-content: space-between;
   width: 100vw;
+
+  &--rainbow {
+    background-color: $rainbow-background-main;
+    color: $rainbow-text-main;
+  }
+
+  &--atlantis {
+    background-color: $atlantis-background-main;
+    color: $atlantis-text-main;
+  }
+
+  &--sleek {
+    background-color: $sleek-background-main;
+    color: $sleek-text-main;
+  }
+
+  &--tropical {
+    background-color: $tropical-background-main;
+    color: $tropical-text-main;
+  }
+
+
 }

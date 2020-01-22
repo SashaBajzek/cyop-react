@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .Footer {
-  background-color: $rainbow-teal;
+
   width: 100%;
 
   &__copyright,
@@ -12,10 +12,47 @@
   &__copyright {
     display: block;
     padding: 4px 0;
-    text-align: center;
+    text-align: right;
   }
 
   &__link {
     text-decoration: none;
   }
+
+  &--rainbow {
+    background-color: $rainbow-background-accent;
+
+    .Footer__copyright,
+    .Footer__link {
+      color: $rainbow-text-heading;
+    }
+  }
+
+  &--atlantis {
+    background-color: $atlantis-background-accent;
+
+    .Footer__copyright,
+    .Footer__link {
+      color: $atlantis-text-heading;
+    }
+  }
+
+  &--sleek {
+    background-color: $sleek-background-accent;
+
+    .Footer__copyright,
+    .Footer__link {
+      color: $sleek-text-heading;
+    }
+  }
+
+  &--tropical {
+    background-color: $tropical-accent;
+
+    .Footer__copyright,
+    .Footer__link {
+      color: $tropical-text-heading;
+    }
+  }
+
 }

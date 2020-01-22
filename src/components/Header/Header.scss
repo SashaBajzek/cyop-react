@@ -6,22 +6,28 @@
   }
 
   &__heading {
-    text-align: center;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    width: 100vw;
 
     &--rainbow {
-      color: $rainbow-magenta;
+      background-color: $rainbow-background-accent;
+      color: $rainbow-text-heading;
     }
 
-    &--shoreline {
-      color: $shoreline-teal;
+    &--atlantis {
+      background-color: $atlantis-background-accent;
+      color: $atlantis-text-heading;
     }
 
-    &--nobility {
-      color: $nobility-royalty;
+    &--sleek {
+      background-color: $sleek-background-accent;
+      color: $sleek-text-heading;
     }
 
-    &--beach {
-      color: $beach-sunburst;
+    &--tropical {
+      background-color: $tropical-background-accent;
+      color: $tropical-text-heading;
     }
 
   }

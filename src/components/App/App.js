@@ -34,7 +34,7 @@ class App extends React.Component {
     return (
       <React.StrictMode>
         <ThemeContext.Provider value={{ theme, setTheme }}>
-          <div className="App">
+          <div className={`App App--${theme}`}>
             <Header />
             <Router>
               <HomePage displayNav={this.navShouldDisplay()} path="/" />

@@ -1,11 +1,98 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
 
-Nav {
+.Nav {
   display: flex;
   justify-content: space-between;
   width: 100vw;
 
-  &__button {
-    border: 1px solid $rainbow-orange;
+  &__text {
+    @include accessible-hidden;
   }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      outline: none; // replaced with equivalent visual que
+    }
+  }
+
+  &__button--back::before {
+    @include chevron-left;
+  }
+
+  &__button--forward::before {
+    @include chevron-right;
+  }
+
+  &--rainbow {
+
+    .Nav__button--back::before,
+    .Nav__button--forward::before {
+      border-color: $rainbow-text-heading;
+    }
+
+    .Nav__button:focus.Nav__button--back::before,
+    .Nav__button:hover.Nav__button--back::before,
+    .Nav__button:focus.Nav__button--forward::before,
+    .Nav__button:hover.Nav__button--forward::before {
+      box-shadow: 5px -5px 3px 0px $rainbow-accent;
+    }
+  }
+
+  &--atlantis {
+
+    .Nav__button--back::before,
+    .Nav__button--forward::before {
+      border-color: $atlantis-text-heading;
+    }
+
+    .Nav__button:focus.Nav__button--back::before,
+    .Nav__button:hover.Nav__button--back::before,
+    .Nav__button:focus.Nav__button--forward::before,
+    .Nav__button:hover.Nav__button--forward::before {
+      box-shadow: 5px -5px 3px 0px $atlantis-accent;
+    }
+  }
+
+  &--sleek {
+
+    .Nav__button--back::before,
+    .Nav__button--forward::before {
+      border-color: $sleek-text-heading;
+    }
+
+    .Nav__button:focus.Nav__button--back::before,
+    .Nav__button:hover.Nav__button--back::before,
+    .Nav__button:focus.Nav__button--forward::before,
+    .Nav__button:hover.Nav__button--forward::before {
+      box-shadow: 5px -5px 3px 0px $sleek-accent;
+    }
+  }
+
+  &--tropical {
+
+    .Nav__button--back::before,
+    .Nav__button--forward::before {
+      border-color: $tropical-text-heading;
+    }
+
+    .Nav__button:focus.Nav__button--back::before,
+    .Nav__button:hover.Nav__button--back::before,
+    .Nav__button:focus.Nav__button--forward::before,
+    .Nav__button:hover.Nav__button--forward::before {
+      box-shadow: 5px -5px 3px 0px $tropical-accent;
+    }
+  }
+
+
+
+
+
 }

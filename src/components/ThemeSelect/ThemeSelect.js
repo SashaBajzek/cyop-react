@@ -15,9 +15,9 @@ const ThemeSelect = props => {
               onBlur={e => setTheme(e.target.value)}
             >
               <option value="rainbow">Rainbow</option>
-              <option value="shoreline">Shoreline</option>
-              <option value="nobility">Nobility</option>
-              <option value="beach">Beach</option>
+              <option value="atlantis">Atlantis</option>
+              <option value="sleek">Sleek</option>
+              <option value="tropical">Tropical</option>
             </select>
           </label>
         </form>

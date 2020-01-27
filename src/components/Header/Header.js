@@ -3,21 +3,20 @@ import { Link } from "@reach/router";
 import "./Header.scss";
 
 import { ThemeContext } from "context";
-import { ThemeSelect } from "components";
 
-const Header = props => (
-  <header className="Header">
-    <Link to="/">
-      <ThemeContext.Consumer>
-        {({ theme, setTheme }) => (
-          <h1 className={`Header__heading Header__heading--${theme}`}>
-            Choose Your Own Presentation: React
-          </h1>
-        )}
-      </ThemeContext.Consumer>
-    </Link>
-    <ThemeSelect />
-  </header>
+const Header = ({ currentPageTitle = "Secondary Title" }) => (
+  <ThemeContext.Consumer>
+    {({ theme }) => (
+      <header className={`Header Header--${theme}`}>
+        <h1 className="Header__heading--main">
+          <Link to="/">Choose Your Own Presentation: React</Link>
+        </h1>
+        <div aria-hidden="true" className="Header__triangle-1"></div>
+        <div aria-hidden="true" className="Header__triangle-2"></div>
+        <h2 className="Header__heading--secondary">{currentPageTitle}</h2>
+      </header>
+    )}
+  </ThemeContext.Consumer>
 );
 
 export default Header;

@@ -4,7 +4,7 @@ import "./Nav.scss";
 
 import { ThemeContext } from "context";
 
-const Nav = ({ display, nextOptionalText = "", nextUrl = "/" }) => {
+const Nav = ({ display, nextUrl = "/" }) => {
   return display ? (
     <ThemeContext.Consumer>
       {({ theme, setTheme }) => (

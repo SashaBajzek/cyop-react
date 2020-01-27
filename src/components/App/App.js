@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
 import "./App.scss";
-import { Footer, Header } from "components";
+import { Footer } from "components";
 import { ThemeContext } from "context";
 import { HomePage, TeachPage, VotePage } from "pages";
 
@@ -16,7 +16,6 @@ class App extends React.Component {
     };
 
     this.state = {
-      currentPage: 1,
       presentationMode: true,
       setTheme: this.setTheme,
       theme: "rainbow",
@@ -35,7 +34,6 @@ class App extends React.Component {
       <React.StrictMode>
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className={`App App--${theme}`}>
-            <Header />
             <Router>
               <HomePage displayNav={this.navShouldDisplay()} path="/" />
               <TeachPage

@@ -1,12 +1,15 @@
 import React from "react";
-import { Nav } from "components";
+import { Header, Nav, ThemeSelect } from "components";
 import pages from "../../fixtures/toc";
 
 const TeachPage = ({ displayNav, id }) => {
-  const { nextUrl, text } = pages[id];
+  const { nextUrl, text, title } = pages[id];
   return (
     <>
-      {text} <Nav display={displayNav} nextUrl={nextUrl} />
+      <Header currentPageTitle={title} />
+      <Nav display={displayNav} nextUrl={nextUrl} />
+      <ThemeSelect />
+      <p>{text}</p>
     </>
   );
 };

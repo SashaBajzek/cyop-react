@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, VoteButton } from "components";
+import { Header, Nav, ThemeSelect, VoteButton } from "components";
 import pages from "../../fixtures/toc";
 import "./VotePage.scss";
 
@@ -32,9 +32,11 @@ class VotePage extends React.Component {
   render() {
     const { displayNav, id } = this.props;
     const { resultPercentages, winningOption } = this.state;
-    const { nextUrl, options, question } = pages[id];
+    const { nextUrl, options, question, title } = pages[id];
     return (
       <>
+        <Header currentPageTitle={title} />
+        <ThemeSelect />
         <h2>{question}</h2>
         {winningOption === null ? (
           <button onClick={this.collectVotes}>Collect Votes</button>

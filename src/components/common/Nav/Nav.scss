@@ -4,6 +4,10 @@
 .Nav {
   display: flex;
   justify-content: space-between;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
   width: 100vw;
 
   &__text {
@@ -90,9 +94,4 @@
       box-shadow: 5px -5px 3px 0px $tropical-accent;
     }
   }
-
-
-
-
-
 }

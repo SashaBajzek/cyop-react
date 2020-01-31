@@ -1,33 +1,19 @@
 import React from "react";
 import "./VoteButton.scss";
 
-const VoteButton = ({ chosen, disable, result, text, winner }) => (
+const VoteButton = ({ chosen, text }) => (
   <>
-    <div className={winner ? "VoteButton VoteButton--winner" : "VoteButton"}>
+    <div className="VoteButton">
       <input
-        className={
-          disable
-            ? "VoteButton__input VoteButton__input--disabled"
-            : "VoteButton__input"
-        }
-        disabled={disable}
+        className="VoteButton__input"
         type="radio"
         name="exampleRadios"
         id={text}
         value={text}
       />
-      <label
-        className={
-          disable
-            ? "VoteButton__label VoteButton__label--disabled"
-            : "VoteButton__label"
-        }
-        disabled={disable}
-        htmlFor={text}
-      >
+      <label className="VoteButton__label" htmlFor={text}>
         {text}
       </label>
-      {result !== null ? <span>{result}%</span> : null}
     </div>
   </>
 );

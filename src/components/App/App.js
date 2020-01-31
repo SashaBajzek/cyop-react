@@ -16,17 +16,10 @@ class App extends React.Component {
     };
 
     this.state = {
-      presentationMode: true,
       setTheme: this.setTheme,
-      theme: "rainbow",
-      userType: "presenter"
+      theme: "rainbow"
     };
   }
-
-  navShouldDisplay = () => {
-    const { presentationMode, userType } = this.state;
-    return userType === "presenter" || !presentationMode;
-  };
 
   render() {
     const { setTheme, theme } = this.state;
@@ -35,12 +28,9 @@ class App extends React.Component {
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className={`App App--${theme}`}>
             <Router>
-              <HomePage displayNav={this.navShouldDisplay()} path="/" />
-              <TeachPage
-                displayNav={this.navShouldDisplay()}
-                path="/teach/:id"
-              />
-              <VotePage displayNav={this.navShouldDisplay()} path="/vote/:id" />
+              <HomePage path="/" />
+              <TeachPage path="/teach/:id" />
+              <VotePage path="/vote/:id" />
             </Router>
             <Footer />
           </div>

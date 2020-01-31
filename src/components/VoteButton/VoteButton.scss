@@ -29,25 +29,4 @@
     border-color: #4c4;
   }
 
-  &__input--disabled:checked+.VoteButton__label--disabled {
-    background-color: #ddd;
-    border: 2px solid #444;
-  }
-
-  .VoteButton__input--disabled:focus+&__label,
-  .VoteButton__label--disabled:hover {
-    box-shadow: none;
-    cursor: default;
-  }
-
-  &--winner {
-    .VoteButton__label {
-      box-shadow: 0 0 10px 5px purple;
-    }
-
-    .VoteButton__input--disabled:focus+&__label,
-    .VoteButton__label--disabled:hover {
-      box-shadow: 0 0 10px 5px purple;
-    }
-  }
 }

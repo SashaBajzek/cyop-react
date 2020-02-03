@@ -17,7 +17,7 @@ class App extends React.Component {
 
     this.state = {
       setTheme: this.setTheme,
-      theme: "rainbow"
+      theme: "light"
     };
   }
 

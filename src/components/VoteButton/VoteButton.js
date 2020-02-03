@@ -1,9 +1,11 @@
 import React from "react";
+
+import Arrow from "./Arrow";
 import "./VoteButton.scss";
 
-const VoteButton = ({ chosen, text }) => (
+const VoteButton = ({ text, theme }) => (
   <>
-    <div className="VoteButton">
+    <div className={`VoteButton VoteButton--${theme}`}>
       <input
         className="VoteButton__input"
         type="radio"
@@ -13,6 +15,9 @@ const VoteButton = ({ chosen, text }) => (
       />
       <label className="VoteButton__label" htmlFor={text}>
         {text}
+        <span className="VoteButton__arrow">
+          <Arrow theme={theme} />
+        </span>
       </label>
     </div>
   </>

@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.Arrow {
+  height: 72px;
+
+  &--rainbow {
+    background: $rainbow-accent-secondary;
+
+    path {
+      stroke: $rainbow-text-header-secondary;
+    }
+  }
+
+  &--dark {
+    background: $dark-accent-secondary;
+
+    path {
+      stroke: $dark-text-header-secondary;
+    }
+  }
+
+  &--light {
+    background: $light-accent-secondary;
+
+    path {
+      stroke: $light-text-header-secondary;
+    }
+  }
+}

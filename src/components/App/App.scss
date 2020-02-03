@@ -8,30 +8,25 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
   justify-content: space-between;
   position: relative;
   width: 100vw;
 
   &--rainbow {
-    background-color: $rainbow-background-main;
-    color: $rainbow-text-main;
+    background-color: $rainbow-background-primary;
+    color: $rainbow-text-primary;
   }
 
-  &--atlantis {
-    background-color: $atlantis-background-main;
-    color: $atlantis-text-main;
+  &--dark {
+    background-color: $dark-background-primary;
+    color: $dark-text-primary;
   }
 
-  &--sleek {
-    background-color: $sleek-background-main;
-    color: $sleek-text-main;
+  &--light {
+    background-color: $light-background-primary;
+    color: $light-text-primary;
   }
-
-  &--tropical {
-    background-color: $tropical-background-main;
-    color: $tropical-text-main;
-  }
-
 
 }

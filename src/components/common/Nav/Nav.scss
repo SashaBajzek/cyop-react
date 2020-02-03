@@ -4,11 +4,10 @@
 .Nav {
   display: flex;
   justify-content: space-between;
-  left: 0;
+  left: 40px;
   position: fixed;
-  right: 0;
+  right: 40px;
   top: 50%;
-  width: 100vw;
 
   &__text {
     @include accessible-hidden;
@@ -39,59 +38,44 @@
 
     .Nav__button--back::before,
     .Nav__button--forward::before {
-      border-color: $rainbow-text-heading;
+      border-color: $rainbow-accent-primary;
     }
 
     .Nav__button:focus.Nav__button--back::before,
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $rainbow-accent;
+      box-shadow: 5px -5px 3px 0px $rainbow-text-secondary;
     }
   }
 
-  &--atlantis {
+  &--dark {
 
     .Nav__button--back::before,
     .Nav__button--forward::before {
-      border-color: $atlantis-text-heading;
+      border-color: $dark-accent-primary;
     }
 
     .Nav__button:focus.Nav__button--back::before,
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $atlantis-accent;
+      box-shadow: 5px -5px 3px 0px $dark-text-secondary;
     }
   }
 
-  &--sleek {
+  &--light {
 
     .Nav__button--back::before,
     .Nav__button--forward::before {
-      border-color: $sleek-text-heading;
+      border-color: $light-accent-secondary;
     }
 
     .Nav__button:focus.Nav__button--back::before,
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $sleek-accent;
-    }
-  }
-
-  &--tropical {
-
-    .Nav__button--back::before,
-    .Nav__button--forward::before {
-      border-color: $tropical-text-heading;
-    }
-
-    .Nav__button:focus.Nav__button--back::before,
-    .Nav__button:hover.Nav__button--back::before,
-    .Nav__button:focus.Nav__button--forward::before,
-    .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $tropical-accent;
+      box-shadow: 5px -5px 3px 0px $light-text-secondary;
     }
   }
 }

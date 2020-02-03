@@ -1,57 +1,59 @@
 @import '../../styles/variables.scss';
 
 .Footer {
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  right: 0;
 
-  width: 100%;
-
-  &__copyright,
-  &__link {
-    color: $black;
-  }
-
-  &__copyright {
-    display: block;
-    padding: 4px 0;
-    text-align: right;
+  &__triangle {
+    border-left: 50px solid transparent;
+    height: 0;
+    transform: translate(-50px);
+    width: 0;
   }
 
   &__link {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 50px;
+    padding-right: 50px;
     text-decoration: none;
   }
 
   &--rainbow {
-    background-color: $rainbow-background-accent;
+    background-color: $rainbow-accent-secondary;
 
-    .Footer__copyright,
+    .Footer__triangle {
+      border-bottom: 50px solid $rainbow-accent-secondary;
+    }
+
     .Footer__link {
-      color: $rainbow-text-heading;
+      color: $rainbow-text-primary;
     }
   }
 
-  &--atlantis {
-    background-color: $atlantis-background-accent;
+  &--dark {
+    background-color: $dark-accent-secondary;
 
-    .Footer__copyright,
+    .Footer__triangle {
+      border-bottom: 50px solid $dark-accent-secondary;
+    }
+
     .Footer__link {
-      color: $atlantis-text-heading;
+      color: $dark-text-primary;
     }
   }
 
-  &--sleek {
-    background-color: $sleek-background-accent;
+  &--light {
+    background-color: $light-accent-secondary;
 
-    .Footer__copyright,
-    .Footer__link {
-      color: $sleek-text-heading;
+    .Footer__triangle {
+      border-bottom: 50px solid $light-accent-secondary;
     }
-  }
 
-  &--tropical {
-    background-color: $tropical-accent;
-
-    .Footer__copyright,
     .Footer__link {
-      color: $tropical-text-heading;
+      color: $light-text-primary;
     }
   }
 

@@ -4,7 +4,8 @@ let pages = {
   home: {
     nextUrl: "/teach/intro_myself",
     photo: null,
-    text: "Welcome to my React Presentation!",
+    text:
+      "Welcome to my React Presentation!  Text SASHABAJZEK095 to 22333 once to join",
     title: "Home"
   },
   intro_myself: {

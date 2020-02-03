@@ -1,28 +1,45 @@
 // Colors
-$rainbow-background-main: #F7DB4F;
-$rainbow-background-accent: #2F9599;
-$rainbow-text-main: black;
-$rainbow-text-heading: #A7226E;
-$rainbow-accent: #F26B38;
-$rainbow-accent-2: #EC2049;
 
-$atlantis-background-main: #0B0C10;
-$atlantis-background-accent: #1F2833;
-$atlantis-text-main: #C5C6C7;
-$atlantis-text-heading: #66FCF1;
-$atlantis-accent: #45A29E;
+// Rainbow Theme
+$rainbow-background-primary: #F7DB4F;
+$rainbow-background-secondary: #2F9599;
+$rainbow-background-button: #F26B38;
+$rainbow-accent-primary: #EC2049;
+$rainbow-accent-secondary: #A7226E;
 
-$sleek-background-main: #ffd670;
-$sleek-background-accent: #f70d6f;
-$sleek-text-main: black;
-$sleek-text-heading: #e9ff70;
-$sleek-accent: #f70d6f;
+$rainbow-text-primary: #21142E;
+$rainbow-text-secondary: #21142E;
 
-$tropical-background-main: #FEF900;
-$tropical-background-accent: #F21A1D;
-$tropical-text-main: black;
-$tropical-text-heading: white;
-$tropical-accent: #03DDDC;
+$rainbow-text-header-primary:#FFFFFF;
+$rainbow-text-header-secondary:#21142E;
+
+// Dark Theme
+$dark-background-primary: #26283B;
+$dark-background-secondary: #272727;
+$dark-background-button: #4E5C56;
+
+$dark-accent-primary: #808043;
+$dark-accent-secondary: #A83B3B;
+
+$dark-text-primary: #FFFFFF;
+$dark-text-secondary: #D1D161;
+
+$dark-text-header-primary:#FFFFFF;
+$dark-text-header-secondary:#61DAFB;
+
+// Light Theme
+$light-background-primary: #B3D0C4;
+$light-background-secondary: #D6D6EB;
+$light-background-button: #63BE97;
+
+$light-accent-primary: #7A80A8;
+$light-accent-secondary: #C1A23C;
+
+$light-text-primary: #21142E;
+$light-text-secondary: #21142E;
+
+$light-text-header-primary:#FFFFFF;
+$light-text-header-secondary:#21142E;
 
 $dark-grey: #2A363B;
 $black: #000000;

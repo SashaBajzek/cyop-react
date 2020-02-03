@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.Logo {
+  height: 80px;
+
+  &--rainbow {
+    circle {
+      fill: $rainbow-text-header-secondary;
+    }
+
+    ellipse,
+    path {
+      stroke: $rainbow-text-header-secondary;
+    }
+  }
+
+  &--dark {
+    circle {
+      fill: $dark-text-header-secondary;
+    }
+
+    ellipse,
+    path {
+      stroke: $dark-text-header-secondary;
+    }
+  }
+
+  &--light {
+    circle {
+      fill: $light-text-header-secondary;
+    }
+
+    ellipse,
+    path {
+      stroke: $light-text-header-secondary;
+    }
+  }
+}

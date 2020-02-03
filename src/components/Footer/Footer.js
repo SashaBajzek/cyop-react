@@ -9,12 +9,10 @@ const Footer = props => {
     <ThemeContext.Consumer>
       {({ theme, setTheme }) => (
         <footer className={`Footer Footer--${theme}`}>
-          <small className="Footer__copyright">
-            &copy; {year}{" "}
-            <a className="Footer__link" href="https://www.sashabajzek.com">
-              Sasha Bajzek
-            </a>
-          </small>
+          <div aria-hidden="true" className="Footer__triangle"></div>
+          <a className="Footer__link" href="https://www.sashabajzek.com">
+            &copy; {year} Sasha Bajzek
+          </a>
         </footer>
       )}
     </ThemeContext.Consumer>

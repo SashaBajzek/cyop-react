@@ -2,6 +2,7 @@
 
 .Header {
   display: flex;
+  height: 80px;
   justify-content: space-between;
   position: relative;
   width: 100vw;
@@ -13,7 +14,10 @@
   }
 
   &__heading--main {
-    padding: 16px 50px 16px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 16px;
     text-align: right;
 
     a {
@@ -22,140 +26,76 @@
   }
 
   &__heading--secondary {
-    height: 50px;
-    line-height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 80px;
+    padding-left: 16px;
   }
 
 
-  &__triangle-1 {
-    border-right: 70px solid transparent;
+  &__triangle {
+    border-right: 80px solid transparent;
     height: 0;
     width: 0;
-  }
-
-  &__triangle-2 {
-    border-left: 50px solid transparent;
-    height: 0;
-    transform: translate(-50px);
-    width: 0;
-
-    &::after {
-      content: "";
-      display: block;
-      height: 50px;
-      width: 50px;
-    }
   }
 
   &--rainbow {
-
     .Header__heading--main {
-      background-color: $rainbow-background-accent;
+      background-color: $rainbow-accent-primary;
     }
 
     .Header__heading--secondary {
-      background-color: $rainbow-accent;
+      color: $rainbow-text-header-secondary;
     }
 
     &,
     a {
-      color: $rainbow-text-heading;
+      color: $rainbow-text-header-primary;
     }
 
-    .Header__triangle-1 {
-      border-top: 70px solid $rainbow-background-accent;
-    }
-
-    .Header__triangle-2 {
-      border-bottom: 50px solid $rainbow-accent;
-
-      &::after {
-        background: $rainbow-accent;
-      }
+    .Header__triangle {
+      border-top: 80px solid $rainbow-accent-primary;
     }
 
   }
 
-  &--atlantis {
+  &--dark {
     .Header__heading--main {
-      background-color: $atlantis-background-accent;
+      background-color: $dark-accent-primary;
     }
 
     .Header__heading--secondary {
-      background-color: $atlantis-accent;
+      color: $dark-text-header-secondary;
     }
 
     &,
     a {
-      color: $atlantis-text-heading;
+      color: $dark-text-header-primary;
     }
 
-    .Header__triangle-1 {
-      border-top: 70px solid $atlantis-background-accent;
-    }
-
-    .Header__triangle-2 {
-      border-bottom: 50px solid $atlantis-accent;
-
-      &::after {
-        background: $atlantis-accent;
-      }
+    .Header__triangle {
+      border-top: 80px solid $dark-accent-primary;
     }
 
   }
 
-  &--sleek {
+  &--light {
     .Header__heading--main {
-      background-color: $sleek-background-accent;
+      background-color: $light-accent-primary;
     }
 
     .Header__heading--secondary {
-      background-color: $sleek-accent;
+      color: $light-text-header-secondary;
     }
 
     &,
     a {
-      color: $sleek-text-heading;
+      color: $light-text-header-primary
     }
 
-    .Header__triangle-1 {
-      border-top: 70px solid $sleek-background-accent;
-    }
-
-    .Header__triangle-2 {
-      border-bottom: 50px solid $sleek-accent;
-
-      &::after {
-        background: $sleek-accent;
-      }
-    }
-
-  }
-
-  &--tropical {
-    .Header__heading--main {
-      background-color: $tropical-background-accent;
-    }
-
-    .Header__heading--secondary {
-      background-color: $tropical-accent;
-    }
-
-    &,
-    a {
-      color: $tropical-text-heading;
-    }
-
-    .Header__triangle-1 {
-      border-top: 70px solid $tropical-background-accent;
-    }
-
-    .Header__triangle-2 {
-      border-bottom: 50px solid $tropical-accent;
-
-      &::after {
-        background: $tropical-accent;
-      }
+    .Header__triangle {
+      border-top: 80px solid $light-accent-primary;
     }
 
   }

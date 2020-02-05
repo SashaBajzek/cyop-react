@@ -1,9 +1,11 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { navigate, Router } from "@reach/router";
+
 import "./App.scss";
 import { Footer } from "components";
 import { ThemeContext } from "context";
 import { HomePage, TeachPage, VotePage } from "pages";
+import pages from "../../fixtures/toc";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,6 +22,38 @@ class App extends React.Component {
       theme: "light"
     };
   }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown.bind(this));
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown.bind(this));
+  }
+
+  handleKeyDown(e: any) {
+    switch (e.keyCode) {
+      case 37:
+        // Left arrow, go back a page
+        window.history.back();
+        break;
+      case 39:
+        // Right arrow, advance to next page
+        this.goToNextPage();
+        break;
+      default:
+        break;
+    }
+  }
+
+  goToNextPage = () => {
+    const currentPageSplit = window.location.href.split("/");
+    const currentId = currentPageSplit[currentPageSplit.length - 1];
+    const nextPage = currentId
+      ? pages[currentId].nextUrl
+      : pages["home"].nextUrl;
+    navigate(nextPage);
+  };
 
   render() {
     const { setTheme, theme } = this.state;

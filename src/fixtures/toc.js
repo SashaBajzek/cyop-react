@@ -46,7 +46,8 @@ let pages = {
     text: [
       "This presentation IS a React app!",
       "We are going to be manipulating it and learning about it",
-      "It has 2 features we can set:  theme & text"
+      "It has 2 features we can set:  theme & text",
+      "Please feel free to ask questions at any time  :)"
     ],
     title: "About this presentation"
   },

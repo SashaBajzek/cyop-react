@@ -24,8 +24,8 @@ const VotePage = ({ id }) => {
             </a>
             <ul className="VotePage__list">
               {options.map((option, index) => (
-                <li className="VotePage__listItem">
-                  <VoteButton key={option} text={option} theme={theme} />
+                <li className="VotePage__listItem" key={option}>
+                  <VoteButton text={option} theme={theme} />
                 </li>
               ))}
             </ul>

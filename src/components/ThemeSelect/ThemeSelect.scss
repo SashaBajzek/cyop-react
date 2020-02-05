@@ -4,7 +4,9 @@
 .ThemeSelect {
   align-items: center;
   display: flex;
-  margin: 30px 50px 0;
+  left: 50px;
+  position: fixed;
+  top: 100px;
 
   legend,
   &__input,

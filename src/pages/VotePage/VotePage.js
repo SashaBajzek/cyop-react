@@ -1,18 +1,16 @@
 import React from "react";
-import { Header, Nav, ThemeSelect, VoteButton } from "components";
+import { Nav, VoteButton } from "components";
 import pages from "../../fixtures/toc";
 import "./VotePage.scss";
 
 import { ThemeContext } from "context";
 
 const VotePage = ({ id }) => {
-  const { nextUrl, options, question, title } = pages[id];
+  const { nextUrl, options, question } = pages[id];
   return (
     <ThemeContext.Consumer>
       {({ theme, setTheme }) => (
         <>
-          <Header currentPageTitle={title} />
-          <ThemeSelect />
           <Nav nextUrl={nextUrl} />
           <form className={`VotePage__form VotePage__form--${theme}`}>
             <h2 className="VotePage__heading">{question}</h2>

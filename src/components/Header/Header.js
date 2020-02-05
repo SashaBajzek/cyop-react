@@ -5,7 +5,7 @@ import "./Header.scss";
 
 import { ThemeContext } from "context";
 
-const Header = ({ currentPageTitle = "Secondary Title" }) => (
+const Header = () => (
   <ThemeContext.Consumer>
     {({ theme }) => (
       <header className={`Header Header--${theme}`}>

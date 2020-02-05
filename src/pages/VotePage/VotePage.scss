@@ -5,8 +5,12 @@
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
     height: 550px;
-    margin: 100px auto;
+    margin: 0 auto;
     padding: 16px 50px;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
     width: 800px;
 
     &--rainbow {

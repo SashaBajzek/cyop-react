@@ -2,7 +2,7 @@ import React from "react";
 import { navigate, Router } from "@reach/router";
 
 import "./App.scss";
-import { Footer } from "components";
+import { Footer, Header, ThemeSelect } from "components";
 import { ThemeContext } from "context";
 import { HomePage, TeachPage, VotePage } from "pages";
 import pages from "../../fixtures/toc";
@@ -61,6 +61,8 @@ class App extends React.Component {
       <React.StrictMode>
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className={`App App--${theme}`}>
+            <Header />
+            <ThemeSelect />
             <Router>
               <HomePage path="/" theme={theme} />
               <TeachPage path="/teach/:id" theme={theme} />

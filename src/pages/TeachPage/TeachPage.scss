@@ -1,6 +1,12 @@
 @import '../../styles/variables.scss';
 
 .TeachPage {
+  max-height: 550px;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+
   &__heading {
     font-size: 36px;
     margin: 0 auto;

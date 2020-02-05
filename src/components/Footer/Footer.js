@@ -7,7 +7,7 @@ const Footer = props => {
   const year = new Date().getFullYear();
   return (
     <ThemeContext.Consumer>
-      {({ theme, setTheme }) => (
+      {({ theme }) => (
         <footer className={`Footer Footer--${theme}`}>
           <div aria-hidden="true" className="Footer__triangle"></div>
           <a className="Footer__link" href="https://www.sashabajzek.com">

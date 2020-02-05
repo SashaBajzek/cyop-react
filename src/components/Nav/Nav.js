@@ -6,7 +6,7 @@ import { ThemeContext } from "context";
 
 const Nav = ({ nextUrl = "/" }) => (
   <ThemeContext.Consumer>
-    {({ theme, setTheme }) => (
+    {({ theme }) => (
       <nav className={`Nav Nav--${theme}`}>
         <button
           className="Nav__button Nav__button--back"

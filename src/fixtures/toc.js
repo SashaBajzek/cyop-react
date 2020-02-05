@@ -1,5 +1,6 @@
 import votingBallots from "./voting";
 import aboutMe from "../images/aboutMe.jpg";
+import whatReact from "../images/whatReact.png";
 
 let pages = {
   home: {
@@ -26,8 +27,9 @@ let pages = {
     title: "Poll: React"
   },
   what_react: {
+    alt: "React’s logo, three ellipses around a circle",
     nextUrl: "/teach/intro_presentation",
-    photo: null,
+    photo: whatReact,
     text: [
       "A JavaScript library for building user interfaces",
       "Create modular components that render",

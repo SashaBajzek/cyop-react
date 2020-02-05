@@ -1,6 +1,44 @@
+@import '../../styles/variables.scss';
+
 .TeachPage {
-  &__main {
+  &__heading {
+    font-size: 36px;
     margin: 0 auto;
+    text-align: center;
+  }
+
+  &__main {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    margin: 30px auto;
     width: 80vw;
+  }
+
+  &__list {}
+
+  &__listItem {
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
+    width: 550px;
+
+    &--rainbow {
+      background: $rainbow-background-secondary;
+      border-top: 15px $rainbow-accent-primary solid;
+    }
+
+    &--dark {
+      background: $dark-background-secondary;
+      border-top: 15px $dark-accent-primary solid;
+    }
+
+    &--light {
+      background: $light-background-secondary;
+      border-top: 15px $light-accent-primary solid;
+    }
   }
 }

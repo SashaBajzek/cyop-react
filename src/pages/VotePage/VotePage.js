@@ -16,7 +16,12 @@ const VotePage = ({ id }) => {
           <Nav nextUrl={nextUrl} />
           <form className={`VotePage__form VotePage__form--${theme}`}>
             <h2 className="VotePage__heading">{question}</h2>
-            <a href="https://pollev.com/sashabajzek095">Go Vote!</a>
+            <a
+              className="VotePage__link"
+              href="https://pollev.com/sashabajzek095"
+            >
+              Go Vote! (Text SASHABAJZEK095 to 22333 once to join)
+            </a>
             <ul className="VotePage__list">
               {options.map((option, index) => (
                 <li className="VotePage__listItem">

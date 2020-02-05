@@ -12,23 +12,54 @@
     &--rainbow {
       background: $rainbow-background-secondary;
       border-top: 15px $rainbow-accent-primary solid;
+
+      .VotePage__link {
+        color: $rainbow-text-primary;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid $rainbow-text-primary;
+        }
+      }
     }
 
     &--dark {
       background: $dark-background-secondary;
       border-top: 15px $dark-accent-primary solid;
+
+      .VotePage__link {
+        color: $dark-text-primary;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid $dark-text-primary;
+        }
+      }
     }
 
     &--light {
       background: $light-background-secondary;
       border-top: 15px $light-accent-primary solid;
+
+      .VotePage__link {
+        color: $light-text-primary;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid $light-text-primary;
+        }
+      }
     }
 
     .VotePage__heading {
       font-family: 'Roboto', sans-serif;
       font-size: 36px;
       font-weight: 400;
-      margin: 0;
+      margin: 0 0 10px;
+    }
+
+    .VotePage__link {
+      text-decoration: none;
     }
 
     .VotePage__list {

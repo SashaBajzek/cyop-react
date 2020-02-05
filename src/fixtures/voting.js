@@ -1,7 +1,7 @@
 let votingBallots = {
   choose_theme: {
-    options: ["Pastel", "Rainbow", "Sunset"],
-    question: "Choose the color theme for this presentation"
+    options: ["Rainbow", "Dark", "Light"],
+    question: "What theme?"
   },
   intro_audience: {
     options: [
@@ -10,7 +10,7 @@ let votingBallots = {
       "Use it sparingly",
       "Use it everyday"
     ],
-    question: "How well do you know React?"
+    question: "How do you feel about React?"
   }
 };
 

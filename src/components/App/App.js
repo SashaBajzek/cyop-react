@@ -28,8 +28,8 @@ class App extends React.Component {
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className={`App App--${theme}`}>
             <Router>
-              <HomePage path="/" />
-              <TeachPage path="/teach/:id" />
+              <HomePage path="/" theme={theme} />
+              <TeachPage path="/teach/:id" theme={theme} />
               <VotePage path="/vote/:id" />
             </Router>
             <Footer />

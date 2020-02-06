@@ -2,7 +2,7 @@ import React from "react";
 import { navigate, Router } from "@reach/router";
 
 import "./App.scss";
-import { Footer, Header, ThemeSelect } from "components";
+import { Footer, Header, Nav, ThemeSelect } from "components";
 import { ThemeContext } from "context";
 import { HomePage, TeachPage, VotePage } from "pages";
 import pages from "../../fixtures/toc";
@@ -18,6 +18,7 @@ class App extends React.Component {
     };
 
     this.state = {
+      nextPage: "/",
       setTheme: this.setTheme,
       theme: "light"
     };
@@ -31,7 +32,7 @@ class App extends React.Component {
     document.removeEventListener("keydown", this.handleKeyDown.bind(this));
   }
 
-  handleKeyDown(e: any) {
+  handleKeyDown(e) {
     switch (e.keyCode) {
       case 37:
         // Left arrow, go back a page
@@ -46,6 +47,10 @@ class App extends React.Component {
     }
   }
 
+  setNextPage = page => {
+    this.setState({ nextPage: page });
+  };
+
   goToNextPage = () => {
     const currentPageSplit = window.location.href.split("/");
     const currentId = currentPageSplit[currentPageSplit.length - 1];
@@ -56,17 +61,32 @@ class App extends React.Component {
   };
 
   render() {
-    const { setTheme, theme } = this.state;
+    const { nextPage, setTheme, theme } = this.state;
     return (
       <React.StrictMode>
         <ThemeContext.Provider value={{ theme, setTheme }}>
           <div className={`App App--${theme}`}>
             <Header />
+            <Nav nextUrl={nextPage} />
             <ThemeSelect />
             <Router>
-              <HomePage path="/" theme={theme} />
-              <TeachPage path="/teach/:id" theme={theme} />
-              <VotePage path="/vote/:id" />
+              <HomePage
+                path="/"
+                nextPage={nextPage}
+                setNextPage={this.setNextPage}
+                theme={theme}
+              />
+              <TeachPage
+                nextPage={nextPage}
+                path="/teach/:id"
+                setNextPage={this.setNextPage}
+                theme={theme}
+              />
+              <VotePage
+                nextPage={nextPage}
+                path="/vote/:id"
+                setNextPage={this.setNextPage}
+              />
             </Router>
             <Footer />
           </div>

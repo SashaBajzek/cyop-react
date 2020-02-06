@@ -1,9 +1,8 @@
 import React from "react";
-import { Nav } from "components";
 import pages from "../../fixtures/toc";
 import "./TeachPage.scss";
 
-const TeachPage = ({ id, theme }) => {
+const TeachPage = ({ id, nextPage, setNextPage, theme }) => {
   const {
     alt = "I’m very sorry I forgot this alt",
     bannerText,
@@ -12,9 +11,13 @@ const TeachPage = ({ id, theme }) => {
     text,
     title
   } = pages[id];
+
+  if (nextPage !== nextUrl) {
+    setNextPage(nextUrl);
+  }
+
   return (
     <>
-      <Nav nextUrl={nextUrl} />
       <div className="TeachPage">
         <h3 className="TeachPage__heading">{title}</h3>
         <main className="TeachPage__main">

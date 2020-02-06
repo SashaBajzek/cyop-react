@@ -3,7 +3,8 @@ import React from "react";
 function Rainbow(props) {
   return (
     <svg
-      className={`ThemeIcon ThemeIcon--${props.theme} ThemeIcon--rainbow`}
+      className={`ThemeIcon ThemeIcon--rainbow`}
+      role="presentation"
       width={42.435}
       height={22.95}
       viewBox="0 0 42.435 22.95"

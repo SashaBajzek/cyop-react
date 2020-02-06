@@ -3,7 +3,8 @@ import React from "react";
 function Sun(props) {
   return (
     <svg
-      className={`ThemeIcon ThemeIcon--${props.theme} ThemeIcon--sun`}
+      className={`ThemeIcon ThemeIcon--sun`}
+      role="presentation"
       width={561}
       height={542}
       viewBox="0 0 5610 5420"

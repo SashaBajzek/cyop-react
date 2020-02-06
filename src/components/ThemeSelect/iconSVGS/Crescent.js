@@ -3,7 +3,8 @@ import React from "react";
 function Crescent(props) {
   return (
     <svg
-      className={`ThemeIcon ThemeIcon--${props.theme} ThemeIcon--crescent`}
+      className={`ThemeIcon ThemeIcon--crescent`}
+      role="presentation"
       width={22.421}
       height={33.038}
       viewBox="0 0 22.421 33.038"

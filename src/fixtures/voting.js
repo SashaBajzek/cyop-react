@@ -14,6 +14,15 @@ let votingBallots = {
     ],
     question: "How do you feel about React?"
   },
+  ready_to_see_code: {
+    manipulatesNextPage: true,
+    options: [
+      { text: "Ready! Let’s jump in!", url: "/teach/intro_jsx" },
+      { text: "Hold up!  Let’s see more examples", url: "/SASHATODO" },
+      { text: "I’ve got questions...", url: "/vote/ready_to_see_code" }
+    ],
+    question: "Ready to see code?"
+  },
   test_manipulation: {
     manipulatesNextPage: true,
     options: [

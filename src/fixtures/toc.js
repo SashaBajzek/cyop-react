@@ -52,13 +52,18 @@ let pages = {
     title: "About this presentation"
   },
   intro_react_app: {
-    nextUrl: "/teach/intro_jsx",
+    nextUrl: "/vote/ready_to_see_code",
     photo: null,
     text: [
       "A React app is made up of components that take in props (information) from parent components and render HTML or other child components (and send props to child components)",
       "This presentation for example:"
     ],
     title: "Intro to a React app"
+  },
+  ready_to_see_code: {
+    ...votingBallots["ready_to_see_code"],
+    nextUrl: "/teach/intro_jsx",
+    title: "Ready to see code?"
   },
   intro_jsx: {
     nextUrl: "/teach/jsx_example",
@@ -83,13 +88,30 @@ let pages = {
   },
   choose_theme: {
     ...votingBallots["choose_theme"],
-    nextUrl: "/vote/test_manipulation",
+    nextUrl: "/teach/how_theme",
     title: "Vote: Theme"
   },
-  test_manipulation: {
-    ...votingBallots["test_manipulation"],
+  how_theme: {
+    nextUrl: "/teach/props",
+    photo: null,
+    title: "How did the theme change?"
+  },
+  props: {
+    nextUrl: "/teach/context",
+    photo: null,
+    text: [
+      "Pass in props from parent to child components",
+      "Like pouring water, props trickle down the chains of parents and children",
+      "When this gets too far and components along the chain don’t actually need the prop, it’s called prop drilling",
+      "You have other options!  React context or a state management library"
+    ],
+    title: "Props!"
+  },
+  context: {
     nextUrl: "/teach/debugging",
-    title: "Vote: where to go"
+    photo: null,
+    text: ["I also changed the theme for some of the components using context"],
+    title: "Context"
   },
   debugging: {
     text: [

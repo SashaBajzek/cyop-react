@@ -17,12 +17,16 @@
       background: $rainbow-background-secondary;
       border-top: 15px $rainbow-accent-primary solid;
 
+      .VotePage__heading {
+        color: $rainbow-text-header-primary;
+      }
+
       .VotePage__link {
-        color: $rainbow-text-primary;
+        color: $rainbow-text-header-primary;
 
         &:hover,
         &:focus {
-          border-bottom: 1px solid $rainbow-text-primary;
+          border-bottom: 1px solid $rainbow-text-header-primary;
         }
       }
     }

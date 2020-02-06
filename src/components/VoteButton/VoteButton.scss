@@ -48,7 +48,18 @@
 
   &--rainbow {
     .VoteButton__label {
-      background-color: $rainbow-background-button;
+      background: $rainbow-background-button;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      /* Standard syntax (must be last) */
+
+      color: $rainbow-text-secondary;
     }
 
     .VoteButton__arrow {

@@ -17,17 +17,17 @@
     margin-right: 8px;
 
     &--rainbow:hover {
-      border-bottom-color: $rainbow-text-primary;
+      border-bottom-color: $rainbow-text-header-secondary;
       transition: border-bottom-color .2s;
     }
 
     &--dark:hover {
-      border-bottom-color: $dark-text-primary;
+      border-bottom-color: $dark-text-header-secondary;
       transition: border-bottom-color .2s;
     }
 
     &--light:hover {
-      border-bottom-color: $light-text-primary;
+      border-bottom-color: $light-text-header-secondary;
       transition: border-bottom-color .2s;
     }
 
@@ -72,20 +72,20 @@
   &__input--rainbow:checked+&__label--rainbow {
     .ThemeIcon--rainbow {
       path {
-        stroke: $rainbow-text-primary;
+        stroke: $rainbow-text-header-secondary;
       }
     }
 
     .ThemeIcon--crescent {
       path {
-        fill: $rainbow-text-primary;
-        stroke: $rainbow-text-primary;
+        fill: $rainbow-text-header-secondary;
+        stroke: $rainbow-text-header-secondary;
       }
     }
 
     .ThemeIcon--sun {
       path {
-        fill: $rainbow-text-primary;
+        fill: $rainbow-text-header-secondary;
       }
     }
   }
@@ -96,20 +96,20 @@
 
     .ThemeIcon--rainbow {
       path {
-        stroke: $dark-text-primary;
+        stroke: $dark-text-header-secondary;
       }
     }
 
     .ThemeIcon--crescent {
       path {
-        fill: $dark-text-primary;
-        stroke: $dark-text-primary;
+        fill: $dark-text-header-secondary;
+        stroke: $dark-text-header-secondary;
       }
     }
 
     .ThemeIcon--sun {
       path {
-        fill: $dark-text-primary;
+        fill: $dark-text-header-secondary;
       }
     }
   }
@@ -120,20 +120,20 @@
 
     .ThemeIcon--rainbow {
       path {
-        stroke: $light-text-primary;
+        stroke: $light-text-header-secondary;
       }
     }
 
     .ThemeIcon--crescent {
       path {
-        fill: $light-text-primary;
-        stroke: $light-text-primary;
+        fill: $light-text-header-secondary;
+        stroke: $light-text-header-secondary;
       }
     }
 
     .ThemeIcon--sun {
       path {
-        fill: $light-text-primary;
+        fill: $light-text-header-secondary;
       }
     }
   }

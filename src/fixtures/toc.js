@@ -105,9 +105,9 @@ let pages = {
     title: "Where to go now?"
   },
   end: {
-    bannerText: "Feel free to reach out:  @sasha on slack",
+    bannerText: "Feel free to reach out:  @Sasha on slack",
     nextUrl: "/",
-    title: "Thank You!"
+    title: "I hope you feel empowered to try React!"
   }
 };
 

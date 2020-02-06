@@ -41,7 +41,7 @@ let pages = {
     title: "What is React & Why is it so popular?"
   },
   intro_presentation: {
-    nextUrl: "/vote/choose_theme",
+    nextUrl: "/teach/intro_react_app",
     photo: null,
     text: [
       "This presentation IS a React app!",
@@ -51,6 +51,36 @@ let pages = {
     ],
     title: "About this presentation"
   },
+  intro_react_app: {
+    nextUrl: "/teach/intro_jsx",
+    photo: null,
+    text: [
+      "A React app is made up of components that take in props (information) from parent components and render HTML or other child components (and send props to child components)",
+      "This presentation for example:"
+    ],
+    title: "Intro to a React app"
+  },
+  intro_jsx: {
+    nextUrl: "/teach/jsx_example",
+    photo: null,
+    text: [
+      "Babel compiles JSX down to React.createElement() calls that create JS objects that React reads and used to construct the DOM, or what you see on the web page",
+      "Requires \"import React from 'react'\"at the top of every file",
+      "Differences from HTML:  use className instead of class and htmlFor instead of for (reserved in JS)"
+    ],
+    title: "JSX"
+  },
+  jsx_example: {
+    nextUrl: "/vote/choose_theme",
+    photo: null,
+    text: [
+      "Consider the title of this slide",
+      '<h3 className="TeachPage__heading">{title}</h3>',
+      "The curly braces {} allow you to embed JS expressions right in the html",
+      "Note className instead of class"
+    ],
+    title: "JSX Example"
+  },
   choose_theme: {
     ...votingBallots["choose_theme"],
     nextUrl: "/vote/test_manipulation",
@@ -58,8 +88,26 @@ let pages = {
   },
   test_manipulation: {
     ...votingBallots["test_manipulation"],
-    nextUrl: "/",
+    nextUrl: "/teach/debugging",
     title: "Vote: where to go"
+  },
+  debugging: {
+    text: [
+      "Chrome devTools!  Install the React devTools Chrome extension",
+      "Same for firefox"
+    ],
+    nextUrl: "/teach/next_steps",
+    title: "Debugging"
+  },
+  next_steps: {
+    text: ["Create React App", "React Documentation Tutorial"],
+    nextUrl: "/teach/end",
+    title: "Where to go now?"
+  },
+  end: {
+    bannerText: "Feel free to reach out:  @sasha on slack",
+    nextUrl: "/",
+    title: "Thank You!"
   }
 };
 

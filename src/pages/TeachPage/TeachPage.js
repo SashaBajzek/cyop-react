@@ -2,22 +2,33 @@ import React from "react";
 import pages from "../../fixtures/toc";
 import "./TeachPage.scss";
 
-const TeachPage = ({ id, nextPage, setNextPage, theme }) => {
-  const {
-    alt = "I’m very sorry I forgot this alt",
-    bannerText,
-    nextUrl,
-    photo,
-    text,
-    title
-  } = pages[id];
-
-  if (nextPage !== nextUrl) {
-    setNextPage(nextUrl);
+class TeachPage extends React.Component {
+  componentDidMount() {
+    this.updateNextPage();
   }
 
-  return (
-    <>
+  componentDidUpdate() {
+    this.updateNextPage();
+  }
+
+  updateNextPage = () => {
+    const { id, nextPage, setNextPage } = this.props;
+    const { nextUrl } = pages[id];
+    if (nextPage !== nextUrl) {
+      setNextPage(nextUrl);
+    }
+  };
+
+  render() {
+    const { id, theme } = this.props;
+    const {
+      alt = "I’m very sorry I forgot this alt",
+      bannerText,
+      photo,
+      text,
+      title
+    } = pages[id];
+    return (
       <div className="TeachPage">
         <h3 className="TeachPage__heading">{title}</h3>
         <main className="TeachPage__main">
@@ -42,8 +53,8 @@ const TeachPage = ({ id, nextPage, setNextPage, theme }) => {
           ) : null}
         </main>
       </div>
-    </>
-  );
-};
+    );
+  }
+}
 
 export default TeachPage;

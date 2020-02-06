@@ -53,8 +53,13 @@ let pages = {
   },
   choose_theme: {
     ...votingBallots["choose_theme"],
-    nextUrl: "/",
+    nextUrl: "/vote/test_manipulation",
     title: "Vote: Theme"
+  },
+  test_manipulation: {
+    ...votingBallots["test_manipulation"],
+    nextUrl: "/",
+    title: "Vote: where to go"
   }
 };
 

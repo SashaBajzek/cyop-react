@@ -2,23 +2,22 @@
 
 .Header {
   display: flex;
-  height: 80px;
-  justify-content: space-between;
+  flex-direction: column;
   position: fixed;
   width: 100vw;
 
   &__heading--main,
   &__heading--secondary {
     margin: 0;
-    width: 50%;
+    width: 100%;
   }
 
   &__heading--main {
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 16px;
-    text-align: right;
+    padding: 2px;
+    text-align: center;
 
     a {
       text-decoration: none;
@@ -27,17 +26,10 @@
 
   &__heading--secondary {
     font-family: 'Lato', sans-serif;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: bold;
-    line-height: 80px;
-    padding-left: 16px;
-  }
-
-
-  &__triangle {
-    border-right: 80px solid transparent;
-    height: 0;
-    width: 0;
+    line-height: 30px;
+    text-align: center;
   }
 
   &--rainbow {
@@ -55,7 +47,7 @@
     }
 
     .Header__triangle {
-      border-top: 80px solid $rainbow-accent-primary;
+      border-top-color: $rainbow-accent-primary;
     }
 
   }
@@ -75,7 +67,7 @@
     }
 
     .Header__triangle {
-      border-top: 80px solid $dark-accent-primary;
+      border-top-color: $dark-accent-primary;
     }
 
   }
@@ -95,8 +87,46 @@
     }
 
     .Header__triangle {
-      border-top: 80px solid $light-accent-primary;
+      border-top-color: $light-accent-primary;
     }
 
+  }
+}
+
+/* XL Desktop Screen Size */
+
+@media (min-width: $screen-lg-min) {
+  .Header {
+    flex-direction: row;
+    height: $header-height-desktop;
+    justify-content: space-between;
+    position: fixed;
+
+    &__heading--main,
+    &__heading--secondary {
+      width: 50%;
+    }
+
+    &__heading--main {
+      font-size: 36px;
+      padding: 16px;
+      text-align: right;
+    }
+
+    &__heading--secondary {
+      font-size: 60px;
+      line-height: 80px;
+      order: 4;
+      padding-left: 16px;
+      text-align: left;
+    }
+
+    &__triangle {
+      border-right: $header-height-desktop solid transparent;
+      border-top-width: $header-height-desktop;
+      border-top-style: solid;
+      height: 0;
+      width: 0;
+    }
   }
 }

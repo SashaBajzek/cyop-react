@@ -12,7 +12,7 @@
     align-items: center;
     border-bottom: 4px solid transparent;
     display: flex;
-    height: 50px;
+    height: 30px;
     justify-content: center;
     margin-right: 8px;
 
@@ -32,8 +32,8 @@
     }
 
     .ThemeIcon {
-      height: 40px;
-      width: 40px;
+      height: 24px;
+      width: 24px;
 
       &--rainbow {
         path {
@@ -42,7 +42,7 @@
       }
 
       &--crescent {
-        height: 30px;
+        height: 18px;
 
         path {
           fill: $disabled-grey;
@@ -51,7 +51,7 @@
       }
 
       &--sun {
-        height: 44px;
+        height: 24px;
 
         path {
           fill: $disabled-grey;
@@ -137,6 +137,28 @@
       }
     }
   }
+}
 
+/* XL Desktop Screen Size */
+@media (min-width: $screen-lg-min) {
+  .ThemeButton {
 
+    &__label {
+      border-bottom: 4px solid transparent;
+      height: 50px;
+
+      .ThemeIcon {
+        height: 40px;
+        width: 40px;
+
+        &--crescent {
+          height: 30px;
+        }
+
+        &--sun {
+          height: 44px;
+        }
+      }
+    }
+  }
 }

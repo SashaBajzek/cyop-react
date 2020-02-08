@@ -56,7 +56,8 @@ let pages = {
     photo: null,
     text: [
       "A React app is made up of components that take in props (information) from parent components and render HTML or other child components (and send props to child components)",
-      "This presentation for example:"
+      "This presentation for example:",
+      "This presentation is a SPA, notice how when I move forward a slide, the whole page doesn’t have to render, just the components with changing props or state"
     ],
     title: "Intro to a React app"
   },

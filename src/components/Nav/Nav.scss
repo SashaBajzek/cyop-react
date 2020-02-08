@@ -4,9 +4,9 @@
 .Nav {
   display: flex;
   justify-content: space-between;
-  left: 40px;
+  left: 0;
   position: fixed;
-  right: 40px;
+  right: 0;
   top: 50%;
 
   &__text {
@@ -27,11 +27,11 @@
   }
 
   &__button--back::before {
-    @include chevron-left;
+    @include chevron-left-mobile;
   }
 
   &__button--forward::before {
-    @include chevron-right;
+    @include chevron-right-mobile;
   }
 
   &--rainbow {
@@ -76,6 +76,23 @@
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
       box-shadow: 5px -5px 3px 0px $light-text-secondary;
+    }
+  }
+}
+
+/* XL Desktop Screen Size */
+
+@media (min-width: $screen-lg-min) {
+  .Nav {
+    left: 40px;
+    right: 40px;
+
+    &__button--back::before {
+      @include chevron-left-desktop;
+    }
+
+    &__button--forward::before {
+      @include chevron-right-desktop;
     }
   }
 }

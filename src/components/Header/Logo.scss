@@ -1,7 +1,24 @@
 @import '../../styles/variables.scss';
 
 .Logo {
-  height: 80px;
+  animation: react-rotation 100s infinite linear;
+  height: 24px;
+  order: 3;
+  width: 100vw;
+
+  @keyframes react-rotation {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transform-box: fill-box;
+    }
+
+    100% {
+      transform: rotate(360deg);
+      transform-origin: 50% 50%;
+      transform-box: fill-box;
+    }
+  }
 
   &--rainbow {
     circle {
@@ -34,5 +51,15 @@
     path {
       stroke: $light-text-header-secondary;
     }
+  }
+}
+
+/* XL Desktop Screen Size */
+
+@media (min-width: $screen-lg-min) {
+  .Logo {
+    height: $header-height-desktop;
+    order: 3;
+    width: auto;
   }
 }

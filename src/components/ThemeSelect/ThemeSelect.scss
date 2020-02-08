@@ -6,9 +6,16 @@
   display: flex;
   left: 50px;
   position: fixed;
-  top: 100px;
+  top: 40px;
 
   legend {
     @include accessible-hidden;
+  }
+}
+
+/* XL Desktop Screen Size */
+@media (min-width: $screen-lg-min) {
+  .ThemeSelect {
+    top: 100px;
   }
 }

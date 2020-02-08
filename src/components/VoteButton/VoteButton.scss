@@ -13,8 +13,8 @@
     border-radius: 5px;
     display: inline-block;
     font-family: 'Lato', sans-serif;
-    font-size: 26px;
-    padding: 20px;
+    font-size: 18px;
+    padding: 10px;
     position: relative;
     text-align: center;
     width: 100%;
@@ -86,5 +86,15 @@
       background: $light-accent-secondary;
     }
   }
+}
 
+/* XL Desktop Screen Size */
+
+@media (min-width: $screen-lg-min) {
+  .VoteButton {
+    &__label {
+      font-size: 26px;
+      padding: 20px;
+    }
+  }
 }

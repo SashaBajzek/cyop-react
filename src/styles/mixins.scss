@@ -1,4 +1,4 @@
-@mixin chevron {
+@mixin chevron-desktop {
   border-style: solid;
   border-width: 0.3em 0.3em 0 0;
   content: '';
@@ -12,14 +12,40 @@
   width: 60px;
 }
 
-@mixin chevron-left {
-  @include chevron;
+@mixin chevron-left-desktop {
+  @include chevron-desktop;
   left: 0.25em;
   transform: rotate(-135deg);
 }
 
-@mixin chevron-right {
-  @include chevron;
+@mixin chevron-right-desktop {
+  @include chevron-desktop;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+@mixin chevron-mobile {
+  border-style: solid;
+  border-width: 0.2em 0.2em 0 0;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 20px;
+}
+
+@mixin chevron-left-mobile {
+  @include chevron-mobile;
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+@mixin chevron-right-mobile {
+  @include chevron-mobile;
   left: 0;
   transform: rotate(45deg);
 }

@@ -4,14 +4,14 @@
   &__form {
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
-    height: 550px;
     margin: 0 auto;
-    padding: 16px 50px;
+    max-height: calc(100vh - 160px);
+    padding: 8px 10px;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: 80vw;
 
     &--rainbow {
       background: $rainbow-background-secondary;
@@ -61,7 +61,7 @@
 
     .VotePage__heading {
       font-family: 'Roboto', sans-serif;
-      font-size: 36px;
+      font-size: 24px;
       font-weight: 400;
       margin: 0 0 10px;
     }
@@ -79,6 +79,22 @@
 
     .VotePage__listItem {
       width: 100%;
+    }
+  }
+}
+
+/* XL Desktop Screen Size */
+
+@media (min-width: $screen-lg-min) {
+  .VotePage {
+    &__form {
+      height: 550px;
+      padding: 16px 50px;
+      width: 800px;
+
+      .VotePage__heading {
+        font-size: 36px;
+      }
     }
   }
 }

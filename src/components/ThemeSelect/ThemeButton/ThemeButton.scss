@@ -70,6 +70,8 @@
   &__input--rainbow:focus+&__label--rainbow,
   &__label--rainbow:hover,
   &__input--rainbow:checked+&__label--rainbow {
+    border-bottom-color: $rainbow-text-header-secondary;
+
     .ThemeIcon--rainbow {
       path {
         stroke: $rainbow-text-header-secondary;
@@ -93,6 +95,7 @@
   &__input--dark:focus+&__label--dark,
   &__label--dark:hover,
   &__input--dark:checked+&__label--dark {
+    border-bottom-color: $dark-text-header-secondary;
 
     .ThemeIcon--rainbow {
       path {
@@ -117,6 +120,7 @@
   &__input--light:focus+&__label--light,
   &__label--light:hover,
   &__input--light:checked+&__label--light {
+    border-bottom-color: $light-text-header-secondary;
 
     .ThemeIcon--rainbow {
       path {

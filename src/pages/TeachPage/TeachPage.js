@@ -38,8 +38,17 @@ class TeachPage extends React.Component {
           {text ? (
             <ul className="TeachPage__list">
               {text.map(text => (
-                <li className="TeachPage__listItem" key={text}>
-                  {text}
+                <li className="TeachPage__listItem" key={text.text}>
+                  {text.link ? (
+                    <a
+                      className={`TeachPage__link TeachPage__link--${theme}`}
+                      href={text.link}
+                    >
+                      {text.text}
+                    </a>
+                  ) : (
+                    <span>{text.text}</span>
+                  )}
                 </li>
               ))}
             </ul>

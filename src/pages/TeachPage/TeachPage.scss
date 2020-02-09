@@ -63,7 +63,7 @@
     }
   }
 
-  &__image {
+  &__image-wrapper {
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
     width: 80vw;
@@ -83,6 +83,10 @@
       border-top: 15px $light-accent-primary solid;
     }
   }
+
+  &__image {
+    width: 100%;
+  }
 }
 
 /* XL Desktop Screen Size */
@@ -97,6 +101,7 @@
     }
 
     &__main {
+      align-items: center;
       display: flex;
       font-size: 30px;
       justify-content: space-between;
@@ -104,9 +109,13 @@
       width: 80vw;
     }
 
-    &__image {
-      width: 550px;
+    &__image-wrapper {
+      max-height: 800px;
+      max-width: 600px;
+      overflow: hidden;
+      width: 45%;
     }
+
   }
 
 

@@ -1,11 +1,13 @@
 import votingBallots from "./voting";
-import aboutMe from "../images/aboutMe.jpg";
+import aboutMe from "../images/aboutMe.JPG";
 import whatReact from "../images/whatReact.png";
+import jsx_import from "../images/jsx_import.png";
+import jsx_example from "../images/jsx_example.png";
 
 let pages = {
   home: {
     bannerText:
-      "This presentation has interactive voting using Poll Everywhere.  To participate, text SASHABAJZEK095 to 22333 once to join",
+      "Throughout this presentation, there will be voting using Poll Everywhere.  Text SASHABAJZEK095 to 22333 to join.",
     nextUrl: "/teach/intro_myself",
     photo: null,
     title: "Welcome to my React Presentation!"
@@ -16,8 +18,7 @@ let pages = {
     photo: aboutMe,
     text: [
       {
-        text:
-          "Software Engineer on the Customer Experience Dev Standards team at Invitae",
+        text: "Software Engineer on the Dev Standards team at Invitae",
         link: null
       },
       {
@@ -45,11 +46,9 @@ let pages = {
           "Usually making single-page applications (SPA) where React is in charge of rendering everything inside of the <body>",
         link: null
       },
-      { text: "Backend-agnostic", link: null },
-      { text: "Easy for developers to see what the code is doing", link: null },
-      { text: "Lots of support", link: null }
+      { text: "Backend-agnostic", link: null }
     ],
-    title: "What is React & Why is it so popular?"
+    title: "What is React?"
   },
   intro_presentation: {
     nextUrl: "/teach/intro_react_app",
@@ -60,13 +59,12 @@ let pages = {
         text: "We are going to be manipulating it and learning about it",
         link: null
       },
-      { text: "It has 2 features we can set:  theme & text", link: null },
-      { text: "Please feel free to ask questions at any time  :)", link: null }
+      { text: "It has 2 features we can set:  theme & text", link: null }
     ],
     title: "About this presentation"
   },
   intro_react_app: {
-    nextUrl: "/vote/ready_to_see_code",
+    nextUrl: "/teach/no_rerender",
     photo: null,
     text: [
       {
@@ -83,14 +81,37 @@ let pages = {
     ],
     title: "Intro to a React app"
   },
+  no_rerender: {
+    nextUrl: "/vote/ready_to_see_code",
+    photo: null,
+    text: [
+      {
+        text:
+          "Notice how the logo in the header keeps spinning uninterrupted when I change slides.",
+        link: null
+      },
+      {
+        text:
+          "But when I refresh the page, the logo resets before it starts spinning again.",
+        link: null
+      },
+      {
+        text:
+          "Can also see this in the dev tools console: I added a console.log for each header rerender.",
+        link: null
+      }
+    ],
+    title: "Header does not rerender"
+  },
   ready_to_see_code: {
     ...votingBallots["ready_to_see_code"],
     nextUrl: "/teach/intro_jsx",
     title: "Ready to see code?"
   },
   intro_jsx: {
+    alt: "import react",
     nextUrl: "/teach/jsx_example",
-    photo: null,
+    photo: jsx_import,
     text: [
       {
         text:
@@ -98,7 +119,7 @@ let pages = {
         link: null
       },
       {
-        text: "Requires \"import React from 'react'\"at the top of every file",
+        text: "Requires \"import React from 'react' \"at the top of every file",
         link: null
       },
       {
@@ -110,8 +131,10 @@ let pages = {
     title: "JSX"
   },
   jsx_example: {
+    alt: '<h3 className="TeachPage__heading">{title}</h3>',
     nextUrl: "/vote/choose_theme",
-    photo: null,
+    photo: jsx_example,
+
     text: [
       {
         text: "Consider the title of this slide",
@@ -124,10 +147,6 @@ let pages = {
       {
         text:
           "The curly braces {} allow you to embed JS expressions right in the html",
-        link: null
-      },
-      {
-        text: "Note className instead of class",
         link: null
       }
     ],

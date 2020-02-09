@@ -54,11 +54,11 @@ class TeachPage extends React.Component {
             </ul>
           ) : null}
           {photo ? (
-            <img
-              alt={alt}
-              className={`TeachPage__image TeachPage__image--${theme}`}
-              src={photo}
-            />
+            <div
+              className={`TeachPage__image-wrapper TeachPage__image-wrapper--${theme}`}
+            >
+              <img alt={alt} className={`TeachPage__image`} src={photo} />
+            </div>
           ) : null}
         </main>
       </div>

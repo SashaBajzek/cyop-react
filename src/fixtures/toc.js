@@ -2,6 +2,7 @@ import votingBallots from "./voting";
 import aboutMe from "../images/aboutMe.JPG";
 import whatReact from "../images/whatReact.png";
 import jsx_import from "../images/jsx_import.png";
+import jsx_html_for from "../images/jsx_html_for.png";
 import jsx_example from "../images/jsx_example.png";
 
 let pages = {
@@ -9,13 +10,12 @@ let pages = {
     bannerText:
       "Throughout this presentation, there will be voting using Poll Everywhere.  Text SASHABAJZEK095 to 22333 to join.",
     nextUrl: "/teach/intro_myself",
-    photo: null,
+    photos: null,
     title: "Welcome to my React Presentation!"
   },
   intro_myself: {
-    alt: "My desk full of plants",
     nextUrl: "/vote/intro_audience",
-    photo: aboutMe,
+    photos: [{ alt: "My desk full of plants", photo: aboutMe }],
     text: [
       {
         text: "Software Engineer on the Dev Standards team at Invitae",
@@ -35,9 +35,10 @@ let pages = {
     title: "Poll: React"
   },
   what_react: {
-    alt: "React’s logo, three ellipses around a circle",
     nextUrl: "/teach/intro_presentation",
-    photo: whatReact,
+    photos: [
+      { alt: "React’s logo, three ellipses around a circle", photo: whatReact }
+    ],
     text: [
       { text: "A JavaScript library for building user interfaces", link: null },
       { text: "Create modular components that render", link: null },
@@ -52,7 +53,7 @@ let pages = {
   },
   intro_presentation: {
     nextUrl: "/teach/intro_react_app",
-    photo: null,
+    photos: null,
     text: [
       { text: "This presentation IS a React app!", link: null },
       {
@@ -65,7 +66,7 @@ let pages = {
   },
   intro_react_app: {
     nextUrl: "/teach/no_rerender",
-    photo: null,
+    photos: null,
     text: [
       {
         text:
@@ -83,7 +84,7 @@ let pages = {
   },
   no_rerender: {
     nextUrl: "/vote/ready_to_see_code",
-    photo: null,
+    photos: null,
     text: [
       {
         text:
@@ -109,9 +110,11 @@ let pages = {
     title: "Ready to see code?"
   },
   intro_jsx: {
-    alt: "import react",
     nextUrl: "/teach/jsx_example",
-    photo: jsx_import,
+    photos: [
+      { alt: "import react", photo: jsx_import },
+      { alt: "className and htmlFor", photo: jsx_html_for }
+    ],
     text: [
       {
         text:
@@ -131,10 +134,13 @@ let pages = {
     title: "JSX"
   },
   jsx_example: {
-    alt: '<h3 className="TeachPage__heading">{title}</h3>',
     nextUrl: "/vote/choose_theme",
-    photo: jsx_example,
-
+    photos: [
+      {
+        alt: '<h3 className="TeachPage__heading">{title}</h3>',
+        photo: jsx_example
+      }
+    ],
     text: [
       {
         text: "Consider the title of this slide",
@@ -159,12 +165,12 @@ let pages = {
   },
   how_theme: {
     nextUrl: "/teach/props",
-    photo: null,
+    photos: null,
     title: "How did the theme change?"
   },
   props: {
     nextUrl: "/teach/context",
-    photo: null,
+    photos: null,
     text: [
       {
         text: "Pass in props from parent to child components",
@@ -190,7 +196,7 @@ let pages = {
   },
   context: {
     nextUrl: "/teach/debugging",
-    photo: null,
+    photos: null,
     text: [
       {
         text:

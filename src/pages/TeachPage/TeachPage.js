@@ -21,13 +21,7 @@ class TeachPage extends React.Component {
 
   render() {
     const { id, theme } = this.props;
-    const {
-      alt = "I’m very sorry I forgot this alt",
-      bannerText,
-      photo,
-      text,
-      title
-    } = pages[id];
+    const { bannerText, photos, text, title } = pages[id];
     return (
       <div className="TeachPage">
         <h3 className="TeachPage__heading">{title}</h3>
@@ -53,11 +47,20 @@ class TeachPage extends React.Component {
               ))}
             </ul>
           ) : null}
-          {photo ? (
-            <div
-              className={`TeachPage__image-wrapper TeachPage__image-wrapper--${theme}`}
-            >
-              <img alt={alt} className={`TeachPage__image`} src={photo} />
+          {photos ? (
+            <div className={`TeachPage__image-container`}>
+              {photos.map(photo => (
+                <div
+                  className={`TeachPage__image-wrapper TeachPage__image-wrapper--${theme}`}
+                  key={photo.alt}
+                >
+                  <img
+                    alt={photo.alt}
+                    className={`TeachPage__image`}
+                    src={photo.photo}
+                  />
+                </div>
+              ))}
             </div>
           ) : null}
         </main>

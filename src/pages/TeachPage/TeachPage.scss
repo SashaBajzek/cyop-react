@@ -109,11 +109,17 @@
       width: 80vw;
     }
 
+    &__image-container {
+      max-width: 600px;
+      width: 45%;
+    }
+
     &__image-wrapper {
+      margin-bottom: 30px;
       max-height: 800px;
       max-width: 600px;
       overflow: hidden;
-      width: 45%;
+      width: 100%;
     }
 
   }

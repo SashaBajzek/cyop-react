@@ -15,7 +15,7 @@ class Header extends React.PureComponent {
   }
 
   render() {
-    console.log("header rendering");
+    console.log("Header rendering");
     const { count } = this.state;
     const { theme } = this.props;
     return (
@@ -26,6 +26,7 @@ class Header extends React.PureComponent {
         <div aria-hidden="true" className="Header__triangle"></div>
         <Logo />
         <h2 className="Header__heading--secondary">React</h2>
+        <span className="Header__counter-title">Render counter</span>
         <span className="Header__counter">Header: {count}</span>
       </header>
     );

@@ -4,6 +4,7 @@ import whatReact from "../images/whatReact.png";
 import jsx_import from "../images/jsx_import.png";
 import jsx_html_for from "../images/jsx_html_for.png";
 import jsx_example from "../images/jsx_example.png";
+import console_check from "../images/console_check.gif";
 
 let pages = {
   home: {
@@ -117,10 +118,15 @@ let pages = {
   },
   console: {
     nextUrl: "/teach/intro_jsx",
-    photos: null,
+    photos: [
+      {
+        alt: "Demonstrating header only rerenders when props change",
+        photo: console_check
+      }
+    ],
     text: [
       {
-        text: "First open developer tools",
+        text: "First open developer tools (right click, inspect)",
         link: null
       },
       {
@@ -134,7 +140,7 @@ let pages = {
       },
       {
         text:
-          "Note the text 'header rendering' only appearing for the initial render of the app",
+          "Change the theme. Now the header rerenders since it’s theme prop changed.",
         link: null
       }
     ],

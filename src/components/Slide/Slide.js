@@ -65,6 +65,7 @@ class Slide extends React.Component {
   };
 
   render() {
+    console.log("Slide rendering");
     const { theme } = this.props;
     const { count, nextPage } = this.state;
     return (

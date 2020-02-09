@@ -23,6 +23,11 @@
     margin-bottom: 40px;
   }
 
+  &__banner {
+    text-align: center;
+    width: 100%;
+  }
+
   &__image {
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);

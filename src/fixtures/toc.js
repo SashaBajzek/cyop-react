@@ -124,10 +124,10 @@ let pages = {
   },
   next_steps: {
     text: ["Create React App", "React Documentation Tutorial"],
-    nextUrl: "/teach/end",
+    nextUrl: "/title/last_page",
     title: "Where to go now?"
   },
-  end: {
+  last_page: {
     bannerText: "Feel free to reach out:  @Sasha on slack",
     nextUrl: "/",
     title: "I hope you feel empowered to try React!"

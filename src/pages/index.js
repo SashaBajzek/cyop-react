@@ -1,3 +1,3 @@
-export * from "./HomePage";
 export * from "./TeachPage";
+export * from "./TitlePage";
 export * from "./VotePage";

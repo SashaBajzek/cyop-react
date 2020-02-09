@@ -1,9 +1,9 @@
 import React from "react";
-import { navigate, Router } from "@reach/router";
+import { navigate, Redirect, Router } from "@reach/router";
 
 import { Nav } from "components";
 import { ThemeContext } from "context";
-import { HomePage, TeachPage, VotePage } from "pages";
+import { TeachPage, TitlePage, VotePage } from "pages";
 import pages from "../../fixtures/toc";
 
 class Slide extends React.Component {
@@ -60,15 +60,16 @@ class Slide extends React.Component {
           <div className={`Slide Slide--${theme}`}>
             <Nav nextUrl={nextPage} />
             <Router>
-              <HomePage
-                path="/"
-                nextPage={nextPage}
-                setNextPage={this.setNextPage}
-                theme={theme}
-              />
+              <Redirect from="/" to="/title/home" noThrow />
               <TeachPage
                 nextPage={nextPage}
                 path="/teach/:id"
+                setNextPage={this.setNextPage}
+                theme={theme}
+              />
+              <TitlePage
+                nextPage={nextPage}
+                path="/title/:id"
                 setNextPage={this.setNextPage}
                 theme={theme}
               />

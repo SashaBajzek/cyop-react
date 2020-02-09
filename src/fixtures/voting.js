@@ -19,7 +19,7 @@ let votingBallots = {
       { text: "Ready! Let’s jump in!", url: "/teach/intro_jsx" },
       {
         text: "Hold up!  Let’s see the console statement",
-        url: "/teach/intro_jsx"
+        url: "/teach/console"
       },
       { text: "I’ve got questions...", url: "/vote/ready_to_see_code" }
     ],

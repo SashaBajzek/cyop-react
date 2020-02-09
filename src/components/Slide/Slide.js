@@ -2,16 +2,19 @@ import React from "react";
 import { navigate, Redirect, Router } from "@reach/router";
 
 import { Nav } from "components";
-import { ThemeContext } from "context";
 import { TeachPage, TitlePage, VotePage } from "pages";
 import pages from "../../fixtures/toc";
+import "./Slide.scss";
 
 class Slide extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      nextPage: "/"
+      count: 0,
+      nextPage: "/",
+      prevNextPage: "/",
+      prevTheme: this.props.theme
     };
   }
 
@@ -21,6 +24,16 @@ class Slide extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown.bind(this));
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.theme !== state.prevTheme) {
+      return { count: state.count + 1, prevTheme: props.theme };
+    } else if (state.nextPage !== state.prevNextPage) {
+      return { count: state.count + 1, prevNextPage: state.nextPage };
+    }
+    // Return null if the state hasn't changed
+    return null;
   }
 
   handleKeyDown(e) {
@@ -53,35 +66,32 @@ class Slide extends React.Component {
 
   render() {
     const { theme } = this.props;
-    const { nextPage } = this.state;
+    const { count, nextPage } = this.state;
     return (
-      <React.StrictMode>
-        <ThemeContext.Provider value={{ theme }}>
-          <div className={`Slide Slide--${theme}`}>
-            <Nav nextUrl={nextPage} />
-            <Router>
-              <Redirect from="/" to="/title/home" noThrow />
-              <TeachPage
-                nextPage={nextPage}
-                path="/teach/:id"
-                setNextPage={this.setNextPage}
-                theme={theme}
-              />
-              <TitlePage
-                nextPage={nextPage}
-                path="/title/:id"
-                setNextPage={this.setNextPage}
-                theme={theme}
-              />
-              <VotePage
-                nextPage={nextPage}
-                path="/vote/:id"
-                setNextPage={this.setNextPage}
-              />
-            </Router>
-          </div>
-        </ThemeContext.Provider>
-      </React.StrictMode>
+      <div className={`Slide Slide--${theme}`}>
+        <Nav nextUrl={nextPage} />
+        <span className="Slide__counter">Slide: {count}</span>
+        <Router>
+          <Redirect from="/" to="/title/home" noThrow />
+          <TeachPage
+            nextPage={nextPage}
+            path="/teach/:id"
+            setNextPage={this.setNextPage}
+            theme={theme}
+          />
+          <TitlePage
+            nextPage={nextPage}
+            path="/title/:id"
+            setNextPage={this.setNextPage}
+            theme={theme}
+          />
+          <VotePage
+            nextPage={nextPage}
+            path="/vote/:id"
+            setNextPage={this.setNextPage}
+          />
+        </Router>
+      </div>
     );
   }
 }

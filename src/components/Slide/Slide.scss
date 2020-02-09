@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.Slide {
+  &__counter {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    position: fixed;
+    right: 4px;
+    top: 24px;
+  }
+
+  &--rainbow .Slide__counter {
+    color: $rainbow-text-header-secondary;
+  }
+
+  &--dark .Slide__counter {
+    color: $dark-text-header-secondary;
+  }
+
+  &--light .Slide__counter {
+    color: $light-text-header-secondary;
+  }
+}

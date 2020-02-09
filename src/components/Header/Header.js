@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import "./Header.scss";
 
 class Header extends React.PureComponent {
-  state = { count: 0, prevTheme: this.props.theme };
+  state = { count: 1, prevTheme: this.props.theme };
 
   static getDerivedStateFromProps(props, state) {
     if (props.theme !== state.prevTheme) {
@@ -26,7 +26,7 @@ class Header extends React.PureComponent {
         <div aria-hidden="true" className="Header__triangle"></div>
         <Logo />
         <h2 className="Header__heading--secondary">React</h2>
-        <span className="Header__counter">{count}</span>
+        <span className="Header__counter">Header: {count}</span>
       </header>
     );
   }

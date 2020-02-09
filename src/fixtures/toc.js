@@ -115,6 +115,31 @@ let pages = {
     nextUrl: "/teach/intro_jsx",
     title: "Ready to see code?"
   },
+  console: {
+    nextUrl: "/teach/intro_jsx",
+    photos: null,
+    text: [
+      {
+        text: "First open developer tools",
+        link: null
+      },
+      {
+        text: "Go to the console tab",
+        link: null
+      },
+      {
+        text:
+          "Move forward and backward a slide.  Note the header rerender count staying the same since it’s props did not change",
+        link: null
+      },
+      {
+        text:
+          "Note the text 'header rendering' only appearing for the initial render of the app",
+        link: null
+      }
+    ],
+    title: "Console check"
+  },
   intro_jsx: {
     nextUrl: "/teach/jsx_example",
     photos: [

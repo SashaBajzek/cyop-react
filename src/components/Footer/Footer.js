@@ -5,6 +5,7 @@ import { ThemeContext } from "context";
 
 const Footer = props => {
   const year = new Date().getFullYear();
+  console.log("footer render");
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (

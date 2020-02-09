@@ -110,13 +110,18 @@
     }
 
     &__image-container {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 300px);
+      justify-content: center;
+      max-height: 800px;
       max-width: 600px;
       width: 45%;
     }
 
     &__image-wrapper {
       margin-bottom: 30px;
-      max-height: 800px;
+      max-height: 100%;
       max-width: 600px;
       overflow: hidden;
       width: 100%;

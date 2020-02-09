@@ -8,25 +8,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.setTheme = theme => {
-      this.setState({
-        theme: theme
-      });
-    };
-
     this.state = {
-      setTheme: this.setTheme,
+      setTheme: newTheme => {
+        this.setState({
+          theme: newTheme
+        });
+      },
       theme: "light"
     };
   }
 
   render() {
-    const { setTheme, theme } = this.state;
+    const { theme } = this.state;
     return (
       <React.StrictMode>
-        <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ThemeContext.Provider value={this.state}>
           <div className={`App App--${theme}`}>
-            <Header />
+            <Header theme={theme} />
             <ThemeSelect />
             <Slide theme={theme} />
             <Footer />

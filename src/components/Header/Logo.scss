@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .Logo {
-  animation: react-rotation 100s infinite linear;
+  animation: react-rotation 80s infinite linear;
   height: 24px;
   order: 3;
   width: 100vw;
@@ -17,39 +17,6 @@
       transform: rotate(360deg);
       transform-origin: 50% 50%;
       transform-box: fill-box;
-    }
-  }
-
-  &--rainbow {
-    circle {
-      fill: $rainbow-text-header-secondary;
-    }
-
-    ellipse,
-    path {
-      stroke: $rainbow-text-header-secondary;
-    }
-  }
-
-  &--dark {
-    circle {
-      fill: $dark-text-header-secondary;
-    }
-
-    ellipse,
-    path {
-      stroke: $dark-text-header-secondary;
-    }
-  }
-
-  &--light {
-    circle {
-      fill: $light-text-header-secondary;
-    }
-
-    ellipse,
-    path {
-      stroke: $light-text-header-secondary;
     }
   }
 }

@@ -88,12 +88,18 @@ let pages = {
     text: [
       {
         text:
-          "Notice how the logo in the header keeps spinning uninterrupted when I change slides.",
+          "See the number in the top right: I created a counter for the header to track it rerendering.",
+        link: null
+      },
+
+      {
+        text:
+          "The header takes in only 1 prop: theme.  The header rerenders each time the theme prop changes.",
         link: null
       },
       {
         text:
-          "But when I refresh the page, the logo resets before it starts spinning again.",
+          "When I refresh the page, the count resets as the entire app is being rendered for the first time again.  The Header's default state is restored (0)",
         link: null
       },
       {

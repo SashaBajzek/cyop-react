@@ -4,7 +4,7 @@ import "./Logo.scss";
 function Logo(props) {
   return (
     <svg
-      className={`Logo Logo--${props.theme}`}
+      className={`Logo`}
       width={72.348}
       height={77.53}
       viewBox="0 0 72.348 77.53"

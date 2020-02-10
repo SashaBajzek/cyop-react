@@ -14,6 +14,7 @@ import footer_inspected from "../images/footer_inspected.png";
 import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
 import react_devtools from "../images/react_devtools.png";
+import jest from "../images/jest.gif";
 import react_profiler from "../images/react_profiler.png";
 import storybook from "../images/storybook.gif";
 import storybook_code from "../images/storybook_code.png";
@@ -390,15 +391,23 @@ let pages = {
   },
   testing: {
     nextUrl: "/teach/storybook",
-    photos: null,
+    photos: [
+      { alt: "Screenshot of Jest test running and passing", photo: jest }
+    ],
     text: [
       {
-        text: "Jest is a JavaScript testing framework",
+        text:
+          "Jest is a JavaScript testing framework used for writing unit tests",
         link: "https://jestjs.io/"
       },
       {
         text:
-          "It allows you to mock modules and includes timers so you can control how code executes.",
+          "Make snapshots of components to track if changes update how your components render",
+        link: null
+      },
+      {
+        text:
+          "It allows you to mock modules so you can control how code executes.",
         link: null
       }
     ],

@@ -9,6 +9,8 @@ import parent_props from "../images/parent_props.png";
 import react_app_map from "../images/react_app_map.png";
 import render_counter from "../images/render_counter.png";
 import console_check from "../images/console_check.gif";
+import footer from "../images/footer.png";
+import footer_inspected from "../images/footer_inspected.png";
 import jsx_import from "../images/jsx_import.png";
 import jsx_html_for from "../images/jsx_html_for.png";
 import jsx_example from "../images/jsx_example.png";
@@ -23,7 +25,7 @@ let pages = {
   },
   intro_myself: {
     nextUrl: "/vote/intro_audience",
-    photos: [{ alt: "My desk full of plants", photo: aboutMe }],
+    photos: [{ alt: "Photo of me smiling at the beach", photo: aboutMe }],
     text: [
       {
         text: "Software Engineer on the Dev Standards team at Invitae",
@@ -181,11 +183,11 @@ let pages = {
   },
   ready_to_see_code: {
     ...votingBallots["ready_to_see_code"],
-    nextUrl: "/teach/intro_jsx",
+    nextUrl: "/teach/first_component",
     title: "Ready to see code?"
   },
   console: {
-    nextUrl: "/teach/intro_jsx",
+    nextUrl: "/teach/first_component",
     photos: [
       {
         alt: "Demonstrating header only rerenders when props change",
@@ -214,6 +216,32 @@ let pages = {
     ],
     title: "Console check"
   },
+  first_component: {
+    nextUrl: "/teach/intro_jsx",
+    photos: [
+      { alt: "Screenshot of footer component", photo: footer },
+      {
+        alt: "Screenshot of footer element in the DOM",
+        photo: footer_inspected
+      }
+    ],
+    text: [
+      {
+        text: "The Footer (see bottom right) is a functional React component",
+        link: null
+      },
+      {
+        text: "The second screenshot is what is rendered in the DOM",
+        link: null
+      },
+      {
+        text:
+          "The component takes in props and returns what React should render.  That part is written in JSX syntax.",
+        link: null
+      }
+    ],
+    title: "A Simple Component: the Footer"
+  },
   intro_jsx: {
     nextUrl: "/teach/jsx_example",
     photos: [
@@ -236,7 +264,7 @@ let pages = {
         link: null
       }
     ],
-    title: "JSX"
+    title: "Intro to JSX"
   },
   jsx_example: {
     nextUrl: "/vote/choose_theme",

@@ -16,7 +16,7 @@ let votingBallots = {
   ready_to_see_code: {
     manipulatesNextPage: true,
     options: [
-      { text: "Ready! Let’s jump in!", url: "/teach/intro_jsx" },
+      { text: "Ready! Let’s jump in!", url: "/teach/first_component" },
       {
         text: "Hold up!  Let’s see the console statement",
         url: "/teach/console"

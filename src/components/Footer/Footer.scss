@@ -6,7 +6,8 @@
   position: fixed;
   right: 0;
 
-  &__triangle {
+  &::before {
+    content: "";
     border-bottom-width: $footer-height-mobile;
     border-bottom-style: solid;
     border-left: $footer-height-mobile solid transparent;
@@ -22,43 +23,48 @@
     padding-right: $footer-height-mobile;
     text-decoration: none;
   }
+}
 
-  &--rainbow {
+.App--rainbow {
+  .Footer {
     background-color: $rainbow-accent-secondary;
 
-    .Footer__triangle {
+    &::before {
       border-bottom-color: $rainbow-accent-secondary;
     }
 
-    .Footer__link {
+    &__link {
       color: $rainbow-text-header-primary;
     }
   }
+}
 
-  &--dark {
+.App--dark {
+  .Footer {
     background-color: $dark-accent-secondary;
 
-    .Footer__triangle {
+    &::before {
       border-bottom-color: $dark-accent-secondary;
     }
 
-    .Footer__link {
-      color: $dark-text-primary;
+    &__link {
+      color: $dark-text-header-primary;
     }
   }
+}
 
-  &--light {
+.App--light {
+  .Footer {
     background-color: $light-accent-secondary;
 
-    .Footer__triangle {
+    &::before {
       border-bottom-color: $light-accent-secondary;
     }
 
-    .Footer__link {
-      color: $light-text-primary;
+    &__link {
+      color: $light-text-header-primary;
     }
   }
-
 }
 
 /* XL Desktop Screen Size */
@@ -66,7 +72,7 @@
 @media (min-width: $screen-lg-min) {
   .Footer {
 
-    &__triangle {
+    &::before {
       border-bottom-width: $footer-height-desktop;
       border-left: $footer-height-desktop solid transparent;
       transform: translate(-$footer-height-desktop);

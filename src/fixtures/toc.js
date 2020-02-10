@@ -15,6 +15,8 @@ import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
 import react_devtools from "../images/react_devtools.png";
 import react_profiler from "../images/react_profiler.png";
+import storybook from "../images/storybook.gif";
+import storybook_code from "../images/storybook_code.png";
 import react_docs from "../images/react_docs.png";
 
 let pages = {
@@ -415,7 +417,13 @@ let pages = {
   },
   storybook: {
     nextUrl: "/teach/backend",
-    photos: null,
+    photos: [
+      { alt: "Screenshot of Storybook in action", photo: storybook },
+      {
+        alt: "Screenshot of code used to create the storybook",
+        photo: storybook_code
+      }
+    ],
     text: [
       {
         text: "Storybook lets you view your React components in isolation",
@@ -433,6 +441,11 @@ let pages = {
       },
       {
         text: "This is very useful for iterating with designers",
+        link: null
+      },
+      {
+        text:
+          "Run `npx -p @storybook/cli sb init --type react_scripts` to install, and `npm run storybook` to start",
         link: null
       }
     ],

@@ -13,6 +13,10 @@ import footer from "../images/footer.png";
 import footer_inspected from "../images/footer_inspected.png";
 import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
+
+import reusable_example from "../images/reusable_example.png";
+import map from "../images/map.png";
+
 import react_devtools from "../images/react_devtools.png";
 import jest from "../images/jest.gif";
 import typescript from "../images/typescript.svg";
@@ -193,7 +197,7 @@ let pages = {
   },
   ready_to_see_code: {
     ...votingBallots["ready_to_see_code"],
-    nextUrl: "/teach/first_component",
+    nextUrl: "/teach/console",
     title: "Ready to see code?"
   },
   console: {
@@ -265,6 +269,10 @@ let pages = {
     ],
     text: [
       {
+        text: "Syntactic sugar",
+        link: null
+      },
+      {
         text:
           "Babel compiles JSX down to React.createElement() calls that create JS objects that React reads and used to construct the DOM, or what you see on the web page",
         link: null
@@ -293,9 +301,14 @@ let pages = {
     title: "Vote: What Should We Do?"
   },
   intro_components: {
-    nextUrl: "/vote/choose_theme",
+    nextUrl: "/teach/functional_components",
     photos: null,
     text: [
+      {
+        text:
+          "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation",
+        link: null
+      },
       {
         text: "There are 2 types of components:  class and functional",
         link: null
@@ -307,6 +320,60 @@ let pages = {
       }
     ],
     title: "Intro to Components"
+  },
+  functional_components: {
+    nextUrl: "/teach/class_components",
+    photos: null,
+    text: [
+      {
+        text: "Functional components are stateless",
+        link: null
+      },
+      {
+        text: "All they can do are take in props and render",
+        link: null
+      },
+      {
+        text:
+          "The advantage of using them over class components is that when you don’t need state or the extra methods, functional components are less to type and compile slightly smaller.",
+        link: null
+      }
+    ],
+    title: "Functional Components"
+  },
+  class_components: {
+    nextUrl: "/teach/lifecycle_methods",
+    photos: null,
+    text: [
+      {
+        text: "Class components are stateful",
+        link: null
+      },
+      {
+        text: "They come with lifecycle methods",
+        link: null
+      }
+    ],
+    title: "Class Components"
+  },
+  lifecycle_methods: {
+    nextUrl: "/vote/choose_theme",
+    photos: null,
+    text: [
+      {
+        text: "The most commonly used lifecycle methods are: ",
+        link: null
+      },
+      {
+        text: "Fetching / API calls usually go in componentDidMount",
+        link: null
+      },
+      {
+        text: "MAKE DIAGRAM OF LIFECYCLE METHODS",
+        link: null
+      }
+    ],
+    title: "Lifecycle Methods"
   },
   choose_theme: {
     ...votingBallots["choose_theme"],
@@ -322,6 +389,11 @@ let pages = {
     nextUrl: "/teach/context",
     photos: null,
     text: [
+      {
+        text:
+          "Props are read-only.  All React components must act like pure functions with respect to their props",
+        link: null
+      },
       {
         text: "Pass in props from parent to child components",
         link: null
@@ -345,7 +417,7 @@ let pages = {
     title: "Props!"
   },
   context: {
-    nextUrl: "/teach/lightning_round",
+    nextUrl: "/teach/event_handlers",
     photos: null,
     text: [
       {
@@ -356,7 +428,47 @@ let pages = {
     ],
     title: "Context"
   },
+  event_handlers: {
+    nextUrl: "/teach/reusability",
+    photos: null,
+    text: [
+      {
+        text: "placeholder:  use slide / nav as example.  Or keyboard listener",
+        link: null
+      }
+    ],
+    title: "Event Handlers"
+  },
+  reusability: {
+    nextUrl: "/teach/lightning_round",
+    photos: [
+      { alt: "Mapping over vote options to render buttons", photo: map },
+      {
+        alt: "Vote button components in a list",
+        photo: reusable_example
+      }
+    ],
+    text: [
+      {
+        text:
+          "An advantage to using React is it’s reusability.  You can use the same component multiple times by passing different props.",
+        link: null
+      },
+      {
+        text:
+          "For example, on the voting pages.  I map through the voting options and render a VoteButton component for each one",
+        link: null
+      },
+      {
+        text:
+          "Be sure to set a unique key. This lets React know if it should rerender",
+        link: null
+      }
+    ],
+    title: "Reusability"
+  },
   lightning_round: {
+    bannerText: "Please stop me at any time if you have a question",
     nextUrl: "/teach/debugging",
     photos: null,
     title: "Lightning Round"
@@ -500,7 +612,7 @@ let pages = {
     title: "Try it out!"
   },
   last_page: {
-    bannerText: "Feel free to reach out:  @Sasha on slack",
+    bannerText: "Slides (aka this app) are at https://react.sashabajzek.com",
     nextUrl: "/",
     title: "I hope you feel empowered to try React!"
   }

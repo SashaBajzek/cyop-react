@@ -4,7 +4,10 @@ import whatReact from "../images/whatReact.png";
 import rainbow_theme from "../images/rainbow_theme.png";
 import dark_theme from "../images/dark_theme.png";
 import light_theme from "../images/light_theme.png";
+import component_map from "../images/component_map.png";
+import parent_props from "../images/parent_props.png";
 import react_app_map from "../images/react_app_map.png";
+import render_counter from "../images/render_counter.png";
 import console_check from "../images/console_check.gif";
 import jsx_import from "../images/jsx_import.png";
 import jsx_html_for from "../images/jsx_html_for.png";
@@ -83,10 +86,23 @@ let pages = {
   },
   intro_react_app: {
     nextUrl: "/teach/react_app_map",
+    photos: [
+      { alt: "Simple diagram of a component", photo: component_map },
+      { alt: "Parent/child component relationship", photo: parent_props }
+    ],
     text: [
       {
+        text: "A React app is made up of components",
+        link: null
+      },
+      {
         text:
-          "A React app is made up of components that take in props (information) from parent components and render HTML or other child components (and send props to child components)",
+          "Components take in props(data), manage their own state, and render the appropriate HTML to the page",
+        link: null
+      },
+      {
+        text:
+          "Components are often nested.  This relationship is called parents and children.  The parent component contains the child component.",
         link: null
       }
     ],
@@ -105,6 +121,12 @@ let pages = {
   },
   spa: {
     nextUrl: "/teach/no_rerender",
+    photos: [
+      {
+        alt: "Overlay of component names",
+        photo: react_app_map
+      }
+    ],
     text: [
       {
         text:
@@ -115,13 +137,23 @@ let pages = {
         text:
           "Notice how when I move forward a slide, the whole page doesn’t have to render, just the components with changing state or changing props rerender",
         link: null
+      },
+      {
+        text:
+          "Looking at the diagram, only the Slide and Nav components need to update.  The Header, ThemeSelect, and Footer do not rerender.",
+        link: null
       }
     ],
     title: "Single Page App"
   },
   no_rerender: {
     nextUrl: "/vote/ready_to_see_code",
-    photos: null,
+    photos: [
+      {
+        alt: "Screenshot of render counter",
+        photo: render_counter
+      }
+    ],
     text: [
       {
         text:

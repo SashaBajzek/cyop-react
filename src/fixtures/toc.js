@@ -1,10 +1,14 @@
 import votingBallots from "./voting";
 import aboutMe from "../images/aboutMe.JPG";
 import whatReact from "../images/whatReact.png";
+import rainbow_theme from "../images/rainbow_theme.png";
+import dark_theme from "../images/dark_theme.png";
+import light_theme from "../images/light_theme.png";
+import react_app_map from "../images/react_app_map.png";
+import console_check from "../images/console_check.gif";
 import jsx_import from "../images/jsx_import.png";
 import jsx_html_for from "../images/jsx_html_for.png";
 import jsx_example from "../images/jsx_example.png";
-import console_check from "../images/console_check.gif";
 
 let pages = {
   home: {
@@ -42,46 +46,78 @@ let pages = {
     ],
     text: [
       { text: "A JavaScript library for building user interfaces", link: null },
-      { text: "Create modular components that render", link: null },
       {
         text:
-          "Usually making single-page applications (SPA) where React is in charge of rendering everything inside of the <body>",
+          "Declarative:  React handles the views of your app, updating it and rendering the right components when your data changes",
         link: null
       },
-      { text: "Backend-agnostic", link: null }
+      {
+        text:
+          "Component-based:  Components manage their own state with their logic written in JavaScript",
+        link: null
+      },
+      { text: "Learn Once, Write Anywhere:  Backend-agnostic", link: null }
     ],
-    title: "What is React?"
+    title: "What is React? According to their website..."
   },
   intro_presentation: {
     nextUrl: "/teach/intro_react_app",
-    photos: null,
+    photos: [
+      { alt: "Rainbow theme", photo: rainbow_theme },
+      { alt: "Dark theme", photo: dark_theme },
+      { alt: "Light theme", photo: light_theme }
+    ],
     text: [
       { text: "This presentation IS a React app!", link: null },
       {
         text: "We are going to be manipulating it and learning about it",
         link: null
       },
-      { text: "It has 2 features we can set:  theme & text", link: null }
+      {
+        text:
+          "It has 3 themes & we are going to learn how to set them using React.",
+        link: null
+      }
     ],
     title: "About this presentation"
   },
   intro_react_app: {
-    nextUrl: "/teach/no_rerender",
-    photos: null,
+    nextUrl: "/teach/react_app_map",
     text: [
       {
         text:
           "A React app is made up of components that take in props (information) from parent components and render HTML or other child components (and send props to child components)",
         link: null
-      },
-      { text: "This presentation for example:", link: null },
-      {
-        text:
-          "This presentation is a SPA, notice how when I move forward a slide, the whole page doesn’t have to render, just the components with changing props or state",
-        link: null
       }
     ],
     title: "Intro to a React app"
+  },
+  react_app_map: {
+    nextUrl: "/teach/spa",
+    photos: [
+      {
+        alt: "Overlay of component names",
+        photo: react_app_map
+      }
+    ],
+    text: null,
+    title: "Map of components"
+  },
+  spa: {
+    nextUrl: "/teach/no_rerender",
+    text: [
+      {
+        text:
+          "This presentation is a SPA (single page app), even though the url changes, you are still on the same page, just rendering different components",
+        link: null
+      },
+      {
+        text:
+          "Notice how when I move forward a slide, the whole page doesn’t have to render, just the components with changing state or changing props rerender",
+        link: null
+      }
+    ],
+    title: "Single Page App"
   },
   no_rerender: {
     nextUrl: "/vote/ready_to_see_code",

@@ -109,20 +109,32 @@
       width: 80vw;
     }
 
+    &__list {
+      flex-grow: 1;
+      max-width: 45%;
+    }
+
     &__image-container {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 0;
       height: calc(100vh - 300px);
       justify-content: center;
+      margin: 0 auto;
+      max-height: 1000px;
+      max-width: 1000px;
+    }
+
+    &__list+&__image-container {
+      margin: 0;
       max-height: 800px;
       max-width: 600px;
-      width: 45%;
     }
 
     &__image-wrapper {
       margin-bottom: 30px;
       max-height: 100%;
-      max-width: 600px;
       overflow: hidden;
       width: 100%;
     }

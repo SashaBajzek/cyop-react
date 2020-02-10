@@ -11,9 +11,8 @@ import render_counter from "../images/render_counter.png";
 import console_check from "../images/console_check.gif";
 import footer from "../images/footer.png";
 import footer_inspected from "../images/footer_inspected.png";
-import jsx_import from "../images/jsx_import.png";
-import jsx_html_for from "../images/jsx_html_for.png";
-import jsx_example from "../images/jsx_example.png";
+import footer_highlighted from "../images/footer_highlighted.png";
+import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
 
 let pages = {
   home: {
@@ -170,7 +169,7 @@ let pages = {
       },
       {
         text:
-          "When I refresh the page, the count resets as the entire app is being rendered for the first time again.  The Header's default state is restored (0)",
+          "When I refresh the page, the count resets as the entire app is being rendered for the first time again.  The Header's default state is restored (1)",
         link: null
       },
       {
@@ -227,11 +226,13 @@ let pages = {
     ],
     text: [
       {
-        text: "The Footer (see bottom right) is a functional React component",
+        text:
+          "The Footer in the bottom right corner is a functional React component.  You can see its code in the first photo",
         link: null
       },
       {
-        text: "The second screenshot is what is rendered in the DOM",
+        text:
+          "The second photo is what is rendered in the DOM as seen via devTools",
         link: null
       },
       {
@@ -243,10 +244,13 @@ let pages = {
     title: "A Simple Component: the Footer"
   },
   intro_jsx: {
-    nextUrl: "/teach/jsx_example",
+    nextUrl: "/vote/choose_theme",
     photos: [
-      { alt: "import react", photo: jsx_import },
-      { alt: "className and htmlFor", photo: jsx_html_for }
+      { alt: "Footer with highlights", photo: footer_highlighted },
+      {
+        alt: "Screenshot of footer element in the DOM highlighted",
+        photo: footer_inspected_highlighted
+      }
     ],
     text: [
       {
@@ -255,41 +259,22 @@ let pages = {
         link: null
       },
       {
-        text: "Requires \"import React from 'react' \"at the top of every file",
+        text:
+          "Requires \"import React from 'react' \"at the top of every file. Even though you are not calling React yourself, once JSX is converted, it is being called.",
         link: null
       },
       {
         text:
-          "Differences from HTML:  use className instead of class and htmlFor instead of for (reserved in JS)",
-        link: null
-      }
-    ],
-    title: "Intro to JSX"
-  },
-  jsx_example: {
-    nextUrl: "/vote/choose_theme",
-    photos: [
-      {
-        alt: '<h3 className="TeachPage__heading">{title}</h3>',
-        photo: jsx_example
-      }
-    ],
-    text: [
-      {
-        text: "Consider the title of this slide",
-        link: null
-      },
-      {
-        text: '<h3 className="TeachPage__heading">{title}</h3>',
+          "The curly braces {} allow you to embed JS expressions right in the html.  See how the {year} variable gets rendered as 2020.",
         link: null
       },
       {
         text:
-          "The curly braces {} allow you to embed JS expressions right in the html",
+          "Differences from html:  use className instead of class and htmlFor instead of for (reserved in JS)",
         link: null
       }
     ],
-    title: "JSX Example"
+    title: "What is JSX syntax?"
   },
   choose_theme: {
     ...votingBallots["choose_theme"],

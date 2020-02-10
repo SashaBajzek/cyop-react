@@ -1,5 +1,5 @@
 import votingBallots from "./voting";
-import aboutMe from "../images/aboutMe.JPG";
+import aboutMe from "../images/aboutMe.jpg";
 import whatReact from "../images/whatReact.png";
 import rainbow_theme from "../images/rainbow_theme.png";
 import dark_theme from "../images/dark_theme.png";
@@ -13,6 +13,8 @@ import footer from "../images/footer.png";
 import footer_inspected from "../images/footer_inspected.png";
 import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
+
+import event_example from "../images/event_example.png";
 
 import reusable_example from "../images/reusable_example.png";
 import map from "../images/map.png";
@@ -417,7 +419,7 @@ let pages = {
     title: "Props!"
   },
   context: {
-    nextUrl: "/teach/event_handlers",
+    nextUrl: "/event_handler/event_handlers",
     photos: null,
     text: [
       {
@@ -430,10 +432,25 @@ let pages = {
   },
   event_handlers: {
     nextUrl: "/teach/reusability",
-    photos: null,
+    photos: [{ alt: "EventExample code", photo: event_example }],
     text: [
       {
-        text: "placeholder:  use slide / nav as example.  Or keyboard listener",
+        text: "Here is a component called EventExample and it’s code.",
+        link: null
+      },
+      {
+        text:
+          "It has an onClick listener that runs the component’s `handleClick` function whenever the button is pressed.",
+        link: null
+      },
+      {
+        text:
+          "This function updates the component's state using `this.setState`",
+        link: null
+      },
+      {
+        text:
+          "When the state changes, the component is rerendered and that is how the text gets updated.",
         link: null
       }
     ],

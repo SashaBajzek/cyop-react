@@ -2,7 +2,7 @@ import React from "react";
 import { navigate, Redirect, Router } from "@reach/router";
 
 import { Nav } from "components";
-import { TeachPage, TitlePage, VotePage } from "pages";
+import { EventHandlerPage, TeachPage, TitlePage, VotePage } from "pages";
 import pages from "../../fixtures/toc";
 import "./Slide.scss";
 
@@ -74,6 +74,12 @@ class Slide extends React.Component {
         <span className="Slide__counter">Slide: {count}</span>
         <Router>
           <Redirect from="/" to="/title/home" noThrow />
+          <EventHandlerPage
+            nextPage={nextPage}
+            path="/event_handler/:id"
+            setNextPage={this.setNextPage}
+            theme={theme}
+          />
           <TeachPage
             nextPage={nextPage}
             path="/teach/:id"

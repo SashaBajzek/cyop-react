@@ -1,4 +1,5 @@
 export * from "./App";
+export * from "./EventExample";
 export * from "./Footer";
 export * from "./Header";
 export * from "./Nav";

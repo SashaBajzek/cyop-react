@@ -13,6 +13,9 @@ import footer from "../images/footer.png";
 import footer_inspected from "../images/footer_inspected.png";
 import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
+import react_devtools from "../images/react_devtools.png";
+import react_profiler from "../images/react_profiler.png";
+import react_docs from "../images/react_docs.png";
 
 let pages = {
   home: {
@@ -73,6 +76,10 @@ let pages = {
     ],
     text: [
       { text: "This presentation IS a React app!", link: null },
+      {
+        text: "Its hosted at react.sashabajzek.com",
+        link: "https://react.sashabajzek.com"
+      },
       {
         text: "We are going to be manipulating it and learning about it",
         link: null
@@ -244,7 +251,7 @@ let pages = {
     title: "A Simple Component: the Footer"
   },
   intro_jsx: {
-    nextUrl: "/vote/choose_theme",
+    nextUrl: "/vote/ready_to_change_theme",
     photos: [
       { alt: "Footer with highlights", photo: footer_highlighted },
       {
@@ -275,6 +282,27 @@ let pages = {
       }
     ],
     title: "What is JSX syntax?"
+  },
+  ready_to_change_theme: {
+    ...votingBallots["ready_to_change_theme"],
+    nextUrl: "/teach/intro_components",
+    title: "Vote: What Should We Do?"
+  },
+  intro_components: {
+    nextUrl: "/vote/choose_theme",
+    photos: null,
+    text: [
+      {
+        text: "There are 2 types of components:  class and functional",
+        link: null
+      },
+      {
+        text:
+          "Both take in props and return what to render.  But class components have their own state and lifecycle methods",
+        link: null
+      }
+    ],
+    title: "Intro to Components"
   },
   choose_theme: {
     ...votingBallots["choose_theme"],
@@ -313,7 +341,7 @@ let pages = {
     title: "Props!"
   },
   context: {
-    nextUrl: "/teach/debugging",
+    nextUrl: "/teach/lightning_round",
     photos: null,
     text: [
       {
@@ -324,23 +352,108 @@ let pages = {
     ],
     title: "Context"
   },
+  lightning_round: {
+    nextUrl: "/teach/debugging",
+    photos: null,
+    title: "Lightning Round"
+  },
   debugging: {
+    nextUrl: "/teach/typescript",
+    photos: [
+      { alt: "Screenshot of React devTools", photo: react_devtools },
+      { alt: "Screenshot of React profiler", photo: react_profiler }
+    ],
     text: [
       {
-        text: "Chrome devTools!  Install the React devTools Chrome extension",
+        text: "React Developer Tools!  Click here for Chrome extension",
         link:
           "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en"
       },
       {
-        text: "Same for firefox",
+        text: "Click here for the Firefox extension",
         link: "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
+      },
+      {
+        text:
+          "Use React Developer Tools to track the props and state of components",
+        link: null
+      },
+      {
+        text:
+          "Use the profiler to see how long it takes each component to render.  Looks for bottlenecks.  Can also track how often components are rerendering.",
+        link: null
       }
     ],
-    nextUrl: "/teach/next_steps",
     title: "Debugging"
+  },
+  testing: {
+    nextUrl: "/teach/storybook",
+    photos: null,
+    text: [
+      {
+        text: "Jest is a JavaScript testing framework",
+        link: "https://jestjs.io/"
+      },
+      {
+        text:
+          "It allows you to mock modules and includes timers so you can control how code executes.",
+        link: null
+      }
+    ],
+    title: "Testing"
+  },
+  typescript: {
+    nextUrl: "/teach/testing",
+    photos: null,
+    text: [
+      {
+        text: "Link to TypeScript",
+        link: "https://www.typescriptlang.org/"
+      }
+    ],
+    title: "TypeScript"
+  },
+  storybook: {
+    nextUrl: "/teach/backend",
+    photos: null,
+    text: [
+      {
+        text: "Storybook lets you view your React components in isolation",
+        link: "https://storybook.js.org/docs/guides/guide-react/"
+      },
+      {
+        text:
+          "You can view one component at a time instead of viewing your whole app",
+        link: null
+      },
+      {
+        text:
+          "Using 'knobs', you can manipulate the conditions the component is under so you can see it in all states",
+        link: null
+      },
+      {
+        text: "This is very useful for iterating with designers",
+        link: null
+      }
+    ],
+    title: "Storybook"
+  },
+  backend: {
+    nextUrl: "/teach/next_steps",
+    photos: null,
+    text: [
+      {
+        text: "Add fetches to the componentDidMount lifecycle method",
+        link: null
+      }
+    ],
+    title: "Connect with a back-end"
   },
   next_steps: {
     nextUrl: "/title/last_page",
+    photos: [
+      { alt: "Screenshot of React Documentation page", photo: react_docs }
+    ],
     text: [
       {
         text: "React Documentation",
@@ -351,11 +464,12 @@ let pages = {
         link: "https://reactjs.org/tutorial/tutorial.html"
       },
       {
-        text: "Create React App",
+        text:
+          "Create React App: It generates a 'Hello World' React app with a single command",
         link: "https://create-react-app.dev/"
       }
     ],
-    title: "Where to go now?"
+    title: "Try it out!"
   },
   last_page: {
     bannerText: "Feel free to reach out:  @Sasha on slack",

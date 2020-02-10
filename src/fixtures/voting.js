@@ -1,9 +1,4 @@
 let votingBallots = {
-  choose_theme: {
-    manipulatesNextPage: false,
-    options: [{ text: "Rainbow" }, { text: "Dark" }, { text: "Light" }],
-    question: "What theme?"
-  },
   intro_audience: {
     manipulatesNextPage: false,
     options: [
@@ -21,17 +16,29 @@ let votingBallots = {
         text: "Hold up!  Let’s see the console statement",
         url: "/teach/console"
       },
-      { text: "I’ve got questions...", url: "/vote/ready_to_see_code" }
+      { text: "I’ve got a question...", url: "/vote/ready_to_see_code" }
     ],
     question: "Ready to see code?"
   },
-  test_manipulation: {
+  ready_to_change_theme: {
     manipulatesNextPage: true,
     options: [
-      { text: "intro myself", url: "/teach/intro_myself" },
-      { text: "what react", url: "/teach/what_react" }
+      {
+        text: "Let’s learn about components! (Intro to components)",
+        url: "/teach/intro_components"
+      },
+      {
+        text: "Let’s change the theme! (Skip intro to components)",
+        url: "/vote/choose_theme"
+      },
+      { text: "I’ve got a question...", url: "/vote/ready_to_change_theme" }
     ],
-    question: "Where do you want to go?"
+    question: "What would you like to do next?"
+  },
+  choose_theme: {
+    manipulatesNextPage: false,
+    options: [{ text: "Rainbow" }, { text: "Dark" }, { text: "Light" }],
+    question: "What theme?"
   }
 };
 

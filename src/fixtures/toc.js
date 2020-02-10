@@ -15,6 +15,7 @@ import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
 import react_devtools from "../images/react_devtools.png";
 import jest from "../images/jest.gif";
+import typescript from "../images/typescript.svg";
 import react_profiler from "../images/react_profiler.png";
 import storybook from "../images/storybook.gif";
 import storybook_code from "../images/storybook_code.png";
@@ -415,17 +416,33 @@ let pages = {
   },
   typescript: {
     nextUrl: "/teach/testing",
-    photos: null,
+    photos: [{ alt: "Typescript logo", photo: typescript }],
     text: [
       {
-        text: "Link to TypeScript",
+        text:
+          "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
         link: "https://www.typescriptlang.org/"
+      },
+      {
+        text:
+          "JavaScript is a weakly typed language.  You can coerce one type into another, which can introduce unexpected bugs if you aren’t careful.",
+        link: null
+      },
+      {
+        text:
+          "In TypeScript, you must declare properties and their types.  TypeScript will throw an error if something is missing or the wrong type.",
+        link: null
+      },
+      {
+        text:
+          "It can have a learning curve, but is thought to be worth it in exchange for reducing bugs.",
+        link: null
       }
     ],
     title: "TypeScript"
   },
   storybook: {
-    nextUrl: "/teach/backend",
+    nextUrl: "/teach/next_steps",
     photos: [
       { alt: "Screenshot of Storybook in action", photo: storybook },
       {
@@ -459,17 +476,6 @@ let pages = {
       }
     ],
     title: "Storybook"
-  },
-  backend: {
-    nextUrl: "/teach/next_steps",
-    photos: null,
-    text: [
-      {
-        text: "Add fetches to the componentDidMount lifecycle method",
-        link: null
-      }
-    ],
-    title: "Connect with a back-end"
   },
   next_steps: {
     nextUrl: "/title/last_page",

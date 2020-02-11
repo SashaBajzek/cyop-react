@@ -18,6 +18,7 @@ import functional_component_map from "../images/functional_component_map.png";
 import functional_component_example from "../images/functional_component_example.png";
 
 import event_example from "../images/event_example.png";
+import lifecycle from "../images/lifecycle.png";
 
 import reusable_example from "../images/reusable_example.png";
 import map from "../images/map.png";
@@ -401,45 +402,32 @@ let pages = {
     title: "Functional Component Example"
   },
   class_components: {
-    nextUrl: "/teach/lifecycle_methods",
-    photos: null,
+    nextUrl: "/event_handler/event_handlers",
+    photos: [{ alt: "Simple diagram of a component", photo: component_map }],
     text: [
       {
-        text: "Class components are stateful",
-        link: null
+        text:
+          "Class components take in read-only props just like functional components, but class components are also stateful, they have their own internal state.",
+        link: "https://reactjs.org/docs/react-component.html"
       },
       {
-        text: "They come with lifecycle methods",
+        text:
+          "Class components can use lifecycle methods to effect change at different points in the component’s rendering cycle",
         link: null
       }
     ],
     title: "Class Components"
   },
-  lifecycle_methods: {
-    nextUrl: "/event_handler/event_handlers",
-    photos: null,
-    text: [
-      {
-        text: "The most commonly used lifecycle methods are: ",
-        link: null
-      },
-      {
-        text: "Fetching / API calls usually go in componentDidMount",
-        link: null
-      },
-      {
-        text: "MAKE DIAGRAM OF LIFECYCLE METHODS",
-        link: null
-      }
-    ],
-    title: "Lifecycle Methods"
-  },
   event_handlers: {
-    nextUrl: "/teach/reusability",
+    nextUrl: "/teach/lifecycle_methods",
     photos: [{ alt: "EventExample code", photo: event_example }],
     text: [
       {
-        text: "Here is a component called EventExample and it’s code.",
+        text: "Here is a class component called EventExample.",
+        link: null
+      },
+      {
+        text: "It has state!  State is initialized in the constructor.",
         link: null
       },
       {
@@ -458,40 +446,30 @@ let pages = {
         link: null
       }
     ],
-    title: "Event Handlers:  How Does React... React?"
+    title: "Event Handlers & State:  How Does React... React?"
   },
-  reusability: {
+  lifecycle_methods: {
     nextUrl: "/vote/choose_theme",
-    photos: [
-      { alt: "Mapping over vote options to render buttons", photo: map },
-      {
-        alt: "Vote button components in a list",
-        photo: reusable_example
-      }
-    ],
+    photos: [{ alt: "Lifecycle methods", photo: lifecycle }],
     text: [
       {
         text:
-          "An advantage to using React is it’s reusability.  You can use the same component multiple times by passing different props.",
+          "componentDidMount() is called immediately after a component is mounted.  Good place to set up any subscriptions.",
         link: null
       },
       {
         text:
-          "The same way you can map over an array in JavaScript to return a new array, you can map over an array of input and return a new array of JSX.",
+          "componentDidUpdate() is called immediately after updating occurs. Opportunity to operate on the DOM when the component has been updated. This is a good place to do network requests as long as you compare the current props to previous props.  You may call setState which triggers a rerender.",
         link: null
       },
       {
         text:
-          "Example: the voting pages!  I map through the voting options and render a VoteButton component for each one",
-        link: null
-      },
-      {
-        text:
-          "React uses keys to identify which items have changed, are added, or are removed.  Be sure to set a unique key among the siblings of the list. Only use index as last resort.",
+          "componentWillUnmount() is called before a component is unmounted and destroyed. Here is where you will invalidate timers, cancel network requests, or clean up any subscriptions.",
         link: null
       }
     ],
-    title: "Reusability"
+    title:
+      "Lifecycle Methods (http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)"
   },
   choose_theme: {
     ...votingBallots["choose_theme"],
@@ -640,7 +618,7 @@ let pages = {
   },
   ready_to_move_on: {
     ...votingBallots["ready_to_move_on"],
-    nextUrl: "/teach/lightning_round",
+    nextUrl: "/teach/reusability",
     title: "Vote: Ready to Move On?"
   },
   lightning_round: {
@@ -649,88 +627,41 @@ let pages = {
     photos: null,
     title: "Lightning Round"
   },
-  debugging: {
-    nextUrl: "/teach/typescript",
-    photos: [
-      { alt: "Screenshot of React devTools", photo: react_devtools },
-      { alt: "Screenshot of React profiler", photo: react_profiler }
-    ],
-    text: [
-      {
-        text: "React Developer Tools!  Click here for Chrome extension",
-        link:
-          "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en"
-      },
-      {
-        text: "Click here for the Firefox extension",
-        link: "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
-      },
-      {
-        text:
-          "Use React Developer Tools to track the props and state of components",
-        link: null
-      },
-      {
-        text:
-          "Use the profiler to see how long it takes each component to render.  Looks for bottlenecks.  Can also track how often components are rerendering.",
-        link: null
-      }
-    ],
-    title: "Debugging"
-  },
-  testing: {
+  reusability: {
     nextUrl: "/teach/storybook",
     photos: [
-      { alt: "Screenshot of Jest test running and passing", photo: jest }
+      { alt: "Mapping over vote options to render buttons", photo: map },
+      {
+        alt: "Vote button components in a list",
+        photo: reusable_example
+      }
     ],
     text: [
       {
         text:
-          "Jest is a JavaScript testing framework used for writing unit tests",
-        link: "https://jestjs.io/"
-      },
-      {
-        text:
-          "Make snapshots of components to track if changes update how your components render",
+          "An advantage to using React is it’s reusability.  You can use the same component multiple times by passing different props.",
         link: null
       },
       {
         text:
-          "It allows you to mock modules so you can control how code executes.",
-        link: null
-      }
-    ],
-    title: "Testing"
-  },
-  typescript: {
-    nextUrl: "/teach/testing",
-    photos: [{ alt: "Typescript logo", photo: typescript }],
-    text: [
-      {
-        text:
-          "TypeScript (TS) is a typed superset of JavaScript that compiles to plain JavaScript.",
-        link: "https://www.typescriptlang.org/"
-      },
-      {
-        text:
-          "JavaScript is a weakly typed language.  You can coerce one type into another, which can introduce unexpected bugs if you aren’t careful.",
+          "The same way you can map over an array in JavaScript to return a new array, you can map over an array of input and return a new array of JSX.",
         link: null
       },
       {
         text:
-          "In TS, you must declare properties and their types.  TS will throw an error if something is missing or the wrong type.",
+          "Example: the voting pages!  I map through the voting options and render a VoteButton component for each one",
         link: null
       },
       {
         text:
-          "It can have a learning curve, but is thought to be worth it in exchange for reducing bugs.",
+          "React uses keys to identify which items have changed, are added, or are removed.  Be sure to set a unique key among the siblings of the list. Only use index as last resort.",
         link: null
       }
     ],
-    title: "TypeScript"
+    title: "Reusability"
   },
   storybook: {
-    nextUrl: "/teach/next_steps",
+    nextUrl: "/teach/debugging",
     photos: [
       { alt: "Screenshot of Storybook in action", photo: storybook },
       {
@@ -764,6 +695,86 @@ let pages = {
       }
     ],
     title: "Storybook"
+  },
+  debugging: {
+    nextUrl: "/teach/testing",
+    photos: [
+      { alt: "Screenshot of React devTools", photo: react_devtools },
+      { alt: "Screenshot of React profiler", photo: react_profiler }
+    ],
+    text: [
+      {
+        text: "React Developer Tools!  Click here for Chrome extension",
+        link:
+          "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en"
+      },
+      {
+        text: "Click here for the Firefox extension",
+        link: "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
+      },
+      {
+        text:
+          "Use React Developer Tools to track the props and state of components",
+        link: null
+      },
+      {
+        text:
+          "Use the profiler to see how long it takes each component to render.  Looks for bottlenecks.  Can also track how often components are rerendering.",
+        link: null
+      }
+    ],
+    title: "Debugging"
+  },
+  testing: {
+    nextUrl: "/teach/typescript",
+    photos: [
+      { alt: "Screenshot of Jest test running and passing", photo: jest }
+    ],
+    text: [
+      {
+        text:
+          "Jest is a JavaScript testing framework used for writing unit tests",
+        link: "https://jestjs.io/"
+      },
+      {
+        text:
+          "Make snapshots of components to track if changes update how your components render",
+        link: null
+      },
+      {
+        text:
+          "It allows you to mock modules so you can control how code executes.",
+        link: null
+      }
+    ],
+    title: "Testing"
+  },
+  typescript: {
+    nextUrl: "/teach/next_steps",
+    photos: [{ alt: "Typescript logo", photo: typescript }],
+    text: [
+      {
+        text:
+          "TypeScript (TS) is a typed superset of JavaScript that compiles to plain JavaScript.",
+        link: "https://www.typescriptlang.org/"
+      },
+      {
+        text:
+          "JavaScript is a weakly typed language.  You can coerce one type into another, which can introduce unexpected bugs if you aren’t careful.",
+        link: null
+      },
+      {
+        text:
+          "In TS, you must declare properties and their types.  TS will throw an error if something is missing or the wrong type.",
+        link: null
+      },
+      {
+        text:
+          "It can have a learning curve, but is thought to be worth it in exchange for reducing bugs.",
+        link: null
+      }
+    ],
+    title: "TypeScript"
   },
   next_steps: {
     nextUrl: "/title/last_page",

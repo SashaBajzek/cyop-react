@@ -15,7 +15,7 @@ class Header extends React.PureComponent {
   }
 
   render() {
-    console.log("Header rendering");
+    console.log("HEADER RENDERING!");
     const { count } = this.state;
     const { theme } = this.props;
     return (

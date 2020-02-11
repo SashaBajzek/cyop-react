@@ -14,6 +14,9 @@ import footer_inspected from "../images/footer_inspected.png";
 import footer_highlighted from "../images/footer_highlighted.png";
 import footer_inspected_highlighted from "../images/footer_inspected_highlighted.png";
 
+import functional_component_map from "../images/functional_component_map.png";
+import functional_component_example from "../images/functional_component_example.png";
+
 import event_example from "../images/event_example.png";
 
 import reusable_example from "../images/reusable_example.png";
@@ -300,8 +303,17 @@ let pages = {
   },
   intro_components: {
     nextUrl: "/teach/functional_components",
-    photos: null,
+    photos: [
+      {
+        alt: "Overlay of component names",
+        photo: react_app_map
+      }
+    ],
     text: [
+      {
+        text: "Components are the building blocks of a React app.",
+        link: null
+      },
       {
         text:
           "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation",
@@ -310,34 +322,69 @@ let pages = {
       {
         text: "There are 2 types of components:  class and functional",
         link: null
-      },
-      {
-        text:
-          "Both take in props and return what to render.  But class components have their own state and lifecycle methods",
-        link: null
       }
     ],
     title: "Intro to Components"
   },
   functional_components: {
-    nextUrl: "/teach/class_components",
-    photos: null,
+    nextUrl: "/teach/functional_components_example",
+    photos: [
+      {
+        alt: "Diagram of a functional component",
+        photo: functional_component_map
+      }
+    ],
     text: [
       {
         text: "Functional components are stateless",
         link: null
       },
       {
-        text: "All they can do are take in props and render",
+        text:
+          "They look like JavaScript functions!  All they can do are take in props and return React elements describing what should appear on the screen.",
         link: null
       },
       {
         text:
-          "The advantage of using them over class components is that when you don’t need state or the extra methods, functional components are less to type and compile slightly smaller.",
+          "The advantage of using functional components over class components is that (when you don’t need state or the extra lifecycle methods) functional components have less boilerplate and compile smaller.",
         link: null
       }
     ],
     title: "Functional Components"
+  },
+  functional_components_example: {
+    nextUrl: "/teach/class_components",
+    photos: [
+      {
+        alt: "VoteButton",
+        photo: functional_component_example
+      }
+    ],
+    text: [
+      {
+        text:
+          "Here is a simplified version of the vote button from the voting pages.",
+        link: null
+      },
+      {
+        text: "React import at the top",
+        link: null
+      },
+      {
+        text: "Taking in name, text, and theme as props",
+        link: null
+      },
+      {
+        text:
+          "Return JSX.  At the moment, must always return one encapsulating element.  This example uses a React fragment <> </> so the DOM is not polluted with unnecessary elements",
+        link: null
+      },
+      {
+        text: "Export the component to be imported elsewhere in your app",
+        link: null
+      }
+    ],
+    title: "Functional Component Example"
   },
   class_components: {
     nextUrl: "/teach/lifecycle_methods",
@@ -469,12 +516,17 @@ let pages = {
       },
       {
         text:
-          "For example, on the voting pages.  I map through the voting options and render a VoteButton component for each one",
+          "The same way you can map over an array in JavaScript to return a new array, you can map over an array of input and return a new array of JSX.",
         link: null
       },
       {
         text:
-          "Be sure to set a unique key. This lets React know if it should rerender",
+          "Example: the voting pages!  I map through the voting options and render a VoteButton component for each one",
+        link: null
+      },
+      {
+        text:
+          "React uses keys to identify which items have changed, are added, or are removed.  Be sure to set a unique key among the siblings of the list. Only use index as last resort.",
         link: null
       }
     ],

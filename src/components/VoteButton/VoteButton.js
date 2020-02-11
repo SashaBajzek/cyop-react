@@ -4,7 +4,7 @@ import { navigate } from "@reach/router";
 import Arrow from "./Arrow";
 import "./VoteButton.scss";
 
-const VoteButton = ({ name = "exampleName", text, theme, url = null }) => {
+const VoteButton = ({ name, text, theme, url = null }) => {
   return (
     <>
       <div className={`VoteButton VoteButton--${theme}`}>

@@ -555,12 +555,8 @@ let pages = {
     title: "Prop Drilling"
   },
   context: {
-    nextUrl: "/teach/context_code",
+    nextUrl: "/teach/context_provider",
     photos: [
-      {
-        alt: "Screenshot of context provider wrapping the App component",
-        photo: context_provider
-      },
       {
         alt: "Creating the context with default",
         photo: create_context
@@ -571,11 +567,47 @@ let pages = {
         text:
           "I also changed the theme for some of the components using context",
         link: null
+      },
+      {
+        text:
+          "Using context, we can avoid passing props through intermediate elements.",
+        link: null
+      },
+      {
+        text:
+          "React.createContext creates a Context object. When React renders a component that subscribes to this Context object, it will read the current context value from the closest matching Provider.  Here we set the default value.",
+        link: null
       }
     ],
     title: "Context"
   },
-  context_code: {
+  context_provider: {
+    nextUrl: "/teach/context_consumer",
+    photos: [
+      {
+        alt: "Screenshot of context provider wrapping the App component",
+        photo: context_provider
+      }
+    ],
+    text: [
+      {
+        text: "Use a Provider to pass the current theme to the tree below.",
+        link: null
+      },
+      {
+        text:
+          "This is the App component.  The constructor contains the SetTheme updater and the initial theme",
+        link: null
+      },
+      {
+        text:
+          "It then wraps the app in the ThemeContext.Provider. Now any component can read/update the theme if it subscribes to the provider, no matter how deep the component is.",
+        link: null
+      }
+    ],
+    title: "Context Provider"
+  },
+  context_consumer: {
     nextUrl: "/vote/ready_to_move_on",
     photos: [
       {
@@ -590,13 +622,17 @@ let pages = {
         link: null
       },
       {
-        text:
-          "The is the theme button used to change the theme.  `setTheme` is the function that sets the theme based on the form selection.",
+        text: "This is the theme button used to change the theme.",
         link: null
       },
       {
         text:
-          "`theme` is also used here to set the CSS class for changing the color based on the theme",
+          "`setTheme` from the ThemeContext gets called and updates the theme based on the form selection.",
+        link: null
+      },
+      {
+        text:
+          "`theme` from the ThemeContext is used to set the CSS class for changing the color based on the theme",
         link: null
       }
     ],

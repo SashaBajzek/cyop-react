@@ -100,7 +100,7 @@ let pages = {
     text: [
       { text: "This presentation IS a React app!", link: null },
       {
-        text: "Its hosted at react.sashabajzek.com",
+        text: "Its hosted at react.sashabajzek.com or cyop-react.com",
         link: "https://react.sashabajzek.com"
       },
       {

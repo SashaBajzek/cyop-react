@@ -2,7 +2,7 @@ let votingBallots = {
   intro_audience: {
     manipulatesNextPage: false,
     options: [
-      { text: "I’m not sure what React it is" },
+      { text: "I’m not sure what React is" },
       { text: "I’m currently learning React" },
       { text: "I’m very familiar with React" }
     ],

@@ -43,7 +43,7 @@ class VotePage extends React.Component {
                 className="VotePage__link"
                 href="https://pollev.com/sashabajzek095"
               >
-                Go Vote! (Text SASHABAJZEK095 to 22333 once to join)
+                OPTIONAL: Go Vote! (Text SASHABAJZEK095 to 22333 once to join)
               </a>
               <ul className="VotePage__list">
                 {options.map((option, index) => (

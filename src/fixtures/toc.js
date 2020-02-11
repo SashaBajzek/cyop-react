@@ -43,7 +43,7 @@ import react_docs from "../images/react_docs.png";
 let pages = {
   home: {
     bannerText:
-      "Throughout this presentation, there will be voting using Poll Everywhere.  Text SASHABAJZEK095 to 22333 to join.",
+      "Throughout this presentation, there will be OPTIONAL voting using Poll Everywhere.  Text SASHABAJZEK095 to 22333 to join.",
     nextUrl: "/teach/intro_myself",
     photos: null,
     title: "Welcome to my React Presentation!"

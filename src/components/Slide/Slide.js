@@ -71,7 +71,7 @@ class Slide extends React.Component {
     return (
       <div className={`Slide Slide--${theme}`}>
         <Nav nextUrl={nextPage} />
-        <span className="Slide__counter">Slide: {count}</span>
+        <span className="Slide__counter">Slide Render Counter: {count}</span>
         <Router>
           <Redirect from="/" to="/title/home" noThrow />
           <EventHandlerPage

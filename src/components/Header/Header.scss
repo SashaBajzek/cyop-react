@@ -32,21 +32,12 @@
     text-align: center;
   }
 
-  &__counter-title,
   &__counter {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     position: fixed;
     right: 10px;
-  }
-
-  &__counter-title {
-    text-decoration: underline;
     top: 8px;
-  }
-
-  &__counter {
-    top: 32px;
   }
 
   &--rainbow {
@@ -183,18 +174,9 @@
       width: 0;
     }
 
-    &__counter-title,
     &__counter {
       font-size: 26px;
       right: 20px;
-    }
-
-    &__counter-title {
-      top: 8px;
-    }
-
-    &__counter {
-      top: 40px;
     }
   }
 }

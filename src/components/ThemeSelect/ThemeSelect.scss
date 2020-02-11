@@ -7,6 +7,7 @@
   left: 50px;
   position: fixed;
   top: 40px;
+  z-index: 10; // Fixing bug where slide silently covers the buttons
 
   legend {
     @include accessible-hidden;

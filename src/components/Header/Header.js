@@ -26,8 +26,7 @@ class Header extends React.PureComponent {
         <div aria-hidden="true" className="Header__triangle"></div>
         <Logo />
         <h2 className="Header__heading--secondary">React</h2>
-        <span className="Header__counter-title">Render counter</span>
-        <span className="Header__counter">Header: {count}</span>
+        <span className="Header__counter">Header Render Counter: {count}</span>
       </header>
     );
   }

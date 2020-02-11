@@ -22,6 +22,15 @@ import event_example from "../images/event_example.png";
 import reusable_example from "../images/reusable_example.png";
 import map from "../images/map.png";
 
+import props_parent from "../images/props_parent.png";
+import props_child from "../images/props_child.png";
+
+import prop_drilling from "../images/prop_drilling.png";
+
+import context_provider from "../images/context_provider.png";
+import create_context from "../images/create_context.png";
+import themeButton from "../images/themeButton.png";
+
 import react_devtools from "../images/react_devtools.png";
 import jest from "../images/jest.gif";
 import typescript from "../images/typescript.svg";
@@ -322,6 +331,11 @@ let pages = {
       {
         text: "There are 2 types of components:  class and functional",
         link: null
+      },
+      {
+        text:
+          "Always start component names with a capital letter. React treats components starting with lowercase letters as DOM tags.",
+        link: null
       }
     ],
     title: "Intro to Components"
@@ -356,7 +370,7 @@ let pages = {
     nextUrl: "/teach/class_components",
     photos: [
       {
-        alt: "VoteButton",
+        alt: "VoteButton code",
         photo: functional_component_example
       }
     ],
@@ -402,7 +416,7 @@ let pages = {
     title: "Class Components"
   },
   lifecycle_methods: {
-    nextUrl: "/vote/choose_theme",
+    nextUrl: "/event_handler/event_handlers",
     photos: null,
     text: [
       {
@@ -419,59 +433,6 @@ let pages = {
       }
     ],
     title: "Lifecycle Methods"
-  },
-  choose_theme: {
-    ...votingBallots["choose_theme"],
-    nextUrl: "/teach/how_theme",
-    title: "Vote: Theme"
-  },
-  how_theme: {
-    nextUrl: "/teach/props",
-    photos: null,
-    title: "How did the theme change?"
-  },
-  props: {
-    nextUrl: "/teach/context",
-    photos: null,
-    text: [
-      {
-        text:
-          "Props are read-only.  All React components must act like pure functions with respect to their props",
-        link: null
-      },
-      {
-        text: "Pass in props from parent to child components",
-        link: null
-      },
-      {
-        text:
-          "Like pouring water, props trickle down the chains of parents and children",
-        link: null
-      },
-      {
-        text:
-          "When this gets too far and components along the chain don’t actually need the prop, it’s called prop drilling",
-        link: null
-      },
-      {
-        text:
-          "You have other options!  React context or a state management library",
-        link: null
-      }
-    ],
-    title: "Props!"
-  },
-  context: {
-    nextUrl: "/event_handler/event_handlers",
-    photos: null,
-    text: [
-      {
-        text:
-          "I also changed the theme for some of the components using context",
-        link: null
-      }
-    ],
-    title: "Context"
   },
   event_handlers: {
     nextUrl: "/teach/reusability",
@@ -497,10 +458,10 @@ let pages = {
         link: null
       }
     ],
-    title: "Event Handlers"
+    title: "Event Handlers:  How Does React... React?"
   },
   reusability: {
-    nextUrl: "/teach/lightning_round",
+    nextUrl: "/vote/choose_theme",
     photos: [
       { alt: "Mapping over vote options to render buttons", photo: map },
       {
@@ -531,6 +492,120 @@ let pages = {
       }
     ],
     title: "Reusability"
+  },
+  choose_theme: {
+    ...votingBallots["choose_theme"],
+    nextUrl: "/teach/how_theme",
+    title: "Vote: Theme"
+  },
+  how_theme: {
+    nextUrl: "/teach/props",
+    photos: null,
+    title: "How did the theme change?"
+  },
+  props: {
+    nextUrl: "/teach/prop_drilling",
+    photos: [
+      { alt: "Parent passing props", photo: props_parent },
+      { alt: "Child receiving props", photo: props_child }
+    ],
+    text: [
+      {
+        text: "Pass in props from parent to child components and are read-only",
+        link: null
+      },
+      {
+        text:
+          "The first screenshot is from inside of the <App/> component.  App has a child component called Header and App passed the theme value into the Header component.",
+        link: null
+      },
+      {
+        text:
+          "The second screenshot is a simplified version of the Header component. Note the `const {theme} = this.props` line.  This is called destructuring and it equates to `const theme = this.props.theme`",
+        link: null
+      },
+      {
+        text:
+          "Now the Header component can use the theme to update it’s CSS class",
+        link: null
+      }
+    ],
+    title: "Props!"
+  },
+  prop_drilling: {
+    nextUrl: "/teach/context",
+    photos: [{ alt: "Parent passing props cycle", photo: prop_drilling }],
+    text: [
+      {
+        text:
+          "Like pouring water, props trickle down the chains of parents and children",
+        link: null
+      },
+      {
+        text:
+          "When this gets too far and components along the chain don’t actually need the prop, it’s called prop drilling",
+        link: null
+      },
+      {
+        text:
+          "You have other options!  React context or a state management library (like Redux or Mobx)",
+        link: null
+      }
+    ],
+    title: "Prop Drilling"
+  },
+  context: {
+    nextUrl: "/teach/context_code",
+    photos: [
+      {
+        alt: "Screenshot of context provider wrapping the App component",
+        photo: context_provider
+      },
+      {
+        alt: "Creating the context with default",
+        photo: create_context
+      }
+    ],
+    text: [
+      {
+        text:
+          "I also changed the theme for some of the components using context",
+        link: null
+      }
+    ],
+    title: "Context"
+  },
+  context_code: {
+    nextUrl: "/vote/ready_to_move_on",
+    photos: [
+      {
+        alt: "ThemeButton code with context",
+        photo: themeButton
+      }
+    ],
+    text: [
+      {
+        text:
+          "Any component you want to have access to the theme or the theme setter, wrap in the `ThemeContext.Consumer`",
+        link: null
+      },
+      {
+        text:
+          "The is the theme button used to change the theme.  `setTheme` is the function that sets the theme based on the form selection.",
+        link: null
+      },
+      {
+        text:
+          "`theme` is also used here to set the CSS class for changing the color based on the theme",
+        link: null
+      }
+    ],
+    title: "Context Consumer"
+  },
+  ready_to_move_on: {
+    ...votingBallots["ready_to_move_on"],
+    nextUrl: "/teach/lightning_round",
+    title: "Vote: Ready to Move On?"
   },
   lightning_round: {
     bannerText: "Please stop me at any time if you have a question",

@@ -39,6 +39,11 @@ let votingBallots = {
     manipulatesNextPage: false,
     options: [{ text: "Rainbow" }, { text: "Dark" }, { text: "Light" }],
     question: "What theme?"
+  },
+  ready_to_move_on: {
+    manipulatesNextPage: false,
+    options: [{ text: "Yes!" }, { text: "I’ve got a question..." }],
+    question: "Ready to move on to lightning round?"
   }
 };
 

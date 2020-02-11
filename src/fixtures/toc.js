@@ -411,8 +411,12 @@ let pages = {
         link: "https://reactjs.org/docs/react-component.html"
       },
       {
+        text: "Class components have lifecycle methods",
+        link: null
+      },
+      {
         text:
-          "Class components can use lifecycle methods to effect change at different points in the component’s rendering cycle",
+          "All class components need to have a render() method.  It will be called each time an update happens.",
         link: null
       }
     ],

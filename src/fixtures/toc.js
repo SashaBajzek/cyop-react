@@ -1,5 +1,5 @@
 import votingBallots from "./voting";
-import aboutMe from "../images/aboutMe.jpg";
+import aboutMe from "../images/aboutMe.png";
 import whatReact from "../images/whatReact.png";
 import rainbow_theme from "../images/rainbow_theme.png";
 import dark_theme from "../images/dark_theme.png";
@@ -271,27 +271,23 @@ let pages = {
     ],
     text: [
       {
-        text: "Syntactic sugar",
+        text:
+          "Babel compiles JSX down to React.createElement() calls that create JS objects that React reads and uses to construct the DOM (what you see on the web page)",
         link: null
       },
       {
         text:
-          "Babel compiles JSX down to React.createElement() calls that create JS objects that React reads and used to construct the DOM, or what you see on the web page",
+          "Requires \"import React from 'react' \"at the top of every file.",
         link: null
       },
       {
         text:
-          "Requires \"import React from 'react' \"at the top of every file. Even though you are not calling React yourself, once JSX is converted, it is being called.",
+          "The curly braces {} embed JS expressions right in the html.  See how the {year} variable gets rendered as 2020.",
         link: null
       },
       {
         text:
-          "The curly braces {} allow you to embed JS expressions right in the html.  See how the {year} variable gets rendered as 2020.",
-        link: null
-      },
-      {
-        text:
-          "Differences from html:  use className instead of class and htmlFor instead of for (reserved in JS)",
+          "Differences from html:  className (class) and htmlFor (for) (reserved in JS)",
         link: null
       }
     ],
@@ -549,7 +545,7 @@ let pages = {
     text: [
       {
         text:
-          "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+          "TypeScript (TS) is a typed superset of JavaScript that compiles to plain JavaScript.",
         link: "https://www.typescriptlang.org/"
       },
       {
@@ -559,7 +555,7 @@ let pages = {
       },
       {
         text:
-          "In TypeScript, you must declare properties and their types.  TypeScript will throw an error if something is missing or the wrong type.",
+          "In TS, you must declare properties and their types.  TS will throw an error if something is missing or the wrong type.",
         link: null
       },
       {

@@ -16,16 +16,19 @@
     justify-content: center;
     margin-right: 8px;
 
+    &--rainbow:focus,
     &--rainbow:hover {
       border-bottom-color: $rainbow-text-header-secondary;
       transition: border-bottom-color .2s;
     }
 
+    &--dark:focus,
     &--dark:hover {
       border-bottom-color: $dark-text-header-secondary;
       transition: border-bottom-color .2s;
     }
 
+    &--light:focus,
     &--light:hover {
       border-bottom-color: $light-text-header-secondary;
       transition: border-bottom-color .2s;
@@ -70,7 +73,6 @@
   &__input--rainbow:focus+&__label--rainbow,
   &__label--rainbow:hover,
   &__input--rainbow:checked+&__label--rainbow {
-    border-bottom-color: $rainbow-text-header-secondary;
 
     .ThemeIcon--rainbow {
       path {
@@ -90,12 +92,16 @@
         fill: $rainbow-text-header-secondary;
       }
     }
+  }
+
+  &__input--rainbow:focus+&__label--rainbow,
+  &__label--rainbow:hover {
+    border-bottom-color: $rainbow-text-header-secondary;
   }
 
   &__input--dark:focus+&__label--dark,
   &__label--dark:hover,
   &__input--dark:checked+&__label--dark {
-    border-bottom-color: $dark-text-header-secondary;
 
     .ThemeIcon--rainbow {
       path {
@@ -117,10 +123,14 @@
     }
   }
 
+  &__input--dark:focus+&__label--dark,
+  &__label--dark:hover {
+    border-bottom-color: $dark-text-header-secondary;
+  }
+
   &__input--light:focus+&__label--light,
   &__label--light:hover,
   &__input--light:checked+&__label--light {
-    border-bottom-color: $light-text-header-secondary;
 
     .ThemeIcon--rainbow {
       path {
@@ -140,6 +150,11 @@
         fill: $light-text-header-secondary;
       }
     }
+  }
+
+  &__input--light:focus+&__label--light,
+  &__label--light:hover {
+    border-bottom-color: $light-text-header-secondary;
   }
 }
 

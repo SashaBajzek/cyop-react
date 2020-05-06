@@ -38,7 +38,7 @@
       &:hover,
       &:focus {
         border-bottom-color: $rainbow-text-primary;
-        transition: border-bottom-color .2s;
+        transition: border-bottom-color 0.2s;
       }
     }
 
@@ -48,7 +48,7 @@
       &:hover,
       &:focus {
         border-bottom-color: $dark-text-primary;
-        transition: border-bottom-color .2s;
+        transition: border-bottom-color 0.2s;
       }
     }
 
@@ -58,14 +58,14 @@
       &:hover,
       &:focus {
         border-bottom-color: $light-text-primary;
-        transition: border-bottom-color .2s;
+        transition: border-bottom-color 0.2s;
       }
     }
   }
 
   &__image-wrapper {
     border-radius: 5px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     width: 80vw;
 
     &--rainbow {
@@ -127,7 +127,7 @@
       max-width: 820px;
     }
 
-    &__list+&__image-container {
+    &__list + &__image-container {
       margin: 0;
       max-height: 620px;
       max-width: 600px;

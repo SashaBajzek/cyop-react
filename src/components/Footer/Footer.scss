@@ -71,7 +71,6 @@
 
 @media (min-width: $screen-lg-min) {
   .Footer {
-
     &::before {
       border-bottom-width: $footer-height-desktop;
       border-left: $footer-height-desktop solid transparent;

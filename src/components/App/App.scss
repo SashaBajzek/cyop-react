@@ -28,7 +28,6 @@
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, $gradient-red, $gradient-yellow, $gradient-green, $gradient-teal, $gradient-blue, $gradient-purple);
     /* Standard syntax (must be last) */
-
   }
 
   &--dark {
@@ -40,5 +39,4 @@
     background-color: $light-background-primary;
     color: $light-text-primary;
   }
-
 }

@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
@@ -20,17 +22,17 @@
     width: 100%;
   }
 
-  &__input:focus+&__label,
+  &__input:focus + &__label,
   &__label:hover {
     cursor: pointer;
 
     .VoteButton__arrow {
       opacity: 1;
-      transition: opacity .8s;
+      transition: opacity 0.8s;
     }
   }
 
-  &__input:checked+.VoteButton__label {
+  &__input:checked + .VoteButton__label {
     .VoteButton__arrow {
       opacity: 1;
     }
@@ -50,13 +52,13 @@
     .VoteButton__label {
       background: $rainbow-background-button;
       /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(left, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      background: -webkit-linear-gradient(left, #ddbdc0, #d8d8ba, #b8d8bc, #abcada, #b7b4db, #d6bddd);
       /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      background: -o-linear-gradient(right, #ddbdc0, #d8d8ba, #b8d8bc, #abcada, #b7b4db, #d6bddd);
       /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      background: -moz-linear-gradient(right, #ddbdc0, #d8d8ba, #b8d8bc, #abcada, #b7b4db, #d6bddd);
       /* For Firefox 3.6 to 15 */
-      background: linear-gradient(to right, #DDBDC0, #D8D8BA, #B8D8BC, #ABCADA, #B7B4DB, #D6BDDD);
+      background: linear-gradient(to right, #ddbdc0, #d8d8ba, #b8d8bc, #abcada, #b7b4db, #d6bddd);
       /* Standard syntax (must be last) */
 
       color: $rainbow-text-secondary;

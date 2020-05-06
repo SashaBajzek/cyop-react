@@ -36,7 +36,6 @@
   }
 
   &--rainbow {
-
     .Nav__button--back::before,
     .Nav__button--forward::before {
       border-color: $rainbow-accent-primary;
@@ -46,12 +45,11 @@
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $rainbow-text-secondary;
+      box-shadow: 5px -5px 3px 0 $rainbow-text-secondary;
     }
   }
 
   &--dark {
-
     .Nav__button--back::before,
     .Nav__button--forward::before {
       border-color: $dark-accent-primary;
@@ -61,12 +59,11 @@
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $dark-text-secondary;
+      box-shadow: 5px -5px 3px 0 $dark-text-secondary;
     }
   }
 
   &--light {
-
     .Nav__button--back::before,
     .Nav__button--forward::before {
       border-color: $light-accent-secondary;
@@ -76,7 +73,7 @@
     .Nav__button:hover.Nav__button--back::before,
     .Nav__button:focus.Nav__button--forward::before,
     .Nav__button:hover.Nav__button--forward::before {
-      box-shadow: 5px -5px 3px 0px $light-text-secondary;
+      box-shadow: 5px -5px 3px 0 $light-text-secondary;
     }
   }
 }

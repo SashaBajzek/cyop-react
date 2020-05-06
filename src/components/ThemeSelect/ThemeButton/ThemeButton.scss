@@ -1,8 +1,9 @@
+/* stylelint-disable no-descending-specificity */
+
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
 
 .ThemeButton {
-
   &__input,
   &__label span {
     @include accessible-hidden;
@@ -19,19 +20,19 @@
     &--rainbow:focus,
     &--rainbow:hover {
       border-bottom-color: $rainbow-text-header-secondary;
-      transition: border-bottom-color .2s;
+      transition: border-bottom-color 0.2s;
     }
 
     &--dark:focus,
     &--dark:hover {
       border-bottom-color: $dark-text-header-secondary;
-      transition: border-bottom-color .2s;
+      transition: border-bottom-color 0.2s;
     }
 
     &--light:focus,
     &--light:hover {
       border-bottom-color: $light-text-header-secondary;
-      transition: border-bottom-color .2s;
+      transition: border-bottom-color 0.2s;
     }
 
     .ThemeIcon {
@@ -63,17 +64,15 @@
     }
   }
 
-  &__input:focus+&__label,
   &__label:hover,
-  &__input:checked+&__label {
+  &__input:focus + &__label,
+  &__input:checked + &__label {
     cursor: pointer;
   }
 
-
-  &__input--rainbow:focus+&__label--rainbow,
   &__label--rainbow:hover,
-  &__input--rainbow:checked+&__label--rainbow {
-
+  &__input--rainbow:focus + &__label--rainbow,
+  &__input--rainbow:checked + &__label--rainbow {
     .ThemeIcon--rainbow {
       path {
         stroke: $rainbow-text-header-secondary;
@@ -94,15 +93,14 @@
     }
   }
 
-  &__input--rainbow:focus+&__label--rainbow,
+  &__input--rainbow:focus + &__label--rainbow,
   &__label--rainbow:hover {
     border-bottom-color: $rainbow-text-header-secondary;
   }
 
-  &__input--dark:focus+&__label--dark,
+  &__input--dark:focus + &__label--dark,
   &__label--dark:hover,
-  &__input--dark:checked+&__label--dark {
-
+  &__input--dark:checked + &__label--dark {
     .ThemeIcon--rainbow {
       path {
         stroke: $dark-text-header-secondary;
@@ -123,15 +121,14 @@
     }
   }
 
-  &__input--dark:focus+&__label--dark,
-  &__label--dark:hover {
+  &__label--dark:hover,
+  &__input--dark:focus + &__label--dark {
     border-bottom-color: $dark-text-header-secondary;
   }
 
-  &__input--light:focus+&__label--light,
   &__label--light:hover,
-  &__input--light:checked+&__label--light {
-
+  &__input--light:focus + &__label--light,
+  &__input--light:checked + &__label--light {
     .ThemeIcon--rainbow {
       path {
         stroke: $light-text-header-secondary;
@@ -152,8 +149,8 @@
     }
   }
 
-  &__input--light:focus+&__label--light,
-  &__label--light:hover {
+  &__label--light:hover,
+  &__input--light:focus + &__label--light {
     border-bottom-color: $light-text-header-secondary;
   }
 }
@@ -161,7 +158,6 @@
 /* XL Desktop Screen Size */
 @media (min-width: $screen-lg-min) {
   .ThemeButton {
-
     &__label {
       border-bottom: 4px solid transparent;
       height: 50px;

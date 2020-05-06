@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./Superhero.scss";
+import React, {Component} from 'react'
+import './Superhero.scss'
 
 export default class Superhero extends Component {
   render() {
@@ -217,6 +217,6 @@ export default class Superhero extends Component {
 				c3.5-1.4,6.9-3.7,9.1-6.1C83.1,53.4,79.7,55.2,75.5,55.9z"
         />
       </svg>
-    );
+    )
   }
 }

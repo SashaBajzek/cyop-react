@@ -1,1 +1,1 @@
-export { default as VoteButton } from "./VoteButton";
+export {default as VoteButton} from './VoteButton'

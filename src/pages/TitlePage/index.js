@@ -1,1 +1,1 @@
-export { default as TitlePage } from "./TitlePage";
+export {default as TitlePage} from './TitlePage'

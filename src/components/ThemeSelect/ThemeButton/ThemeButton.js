@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
-import { ThemeContext } from "context";
-import "./ThemeButton.scss";
+import {ThemeContext} from 'context'
+import './ThemeButton.scss'
 
-const ThemeButton = ({ children, value }) => (
+const ThemeButton = ({children, value}) => (
   <ThemeContext.Consumer>
-    {({ theme, setTheme }) => (
+    {({theme, setTheme}) => (
       <>
         <input
           defaultChecked={theme === value}
@@ -16,17 +16,14 @@ const ThemeButton = ({ children, value }) => (
           type="radio"
           value={value}
         />
-        <label
-          className={`ThemeButton__label ThemeButton__label--${theme}`}
-          htmlFor={value}
-        >
+        <label className={`ThemeButton__label ThemeButton__label--${theme}`} htmlFor={value}>
           <span>{value}</span>
           {children}
         </label>
-        <br />{" "}
+        <br />{' '}
       </>
     )}
   </ThemeContext.Consumer>
-);
+)
 
-export default ThemeButton;
+export default ThemeButton

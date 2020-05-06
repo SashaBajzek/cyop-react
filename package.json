@@ -22,7 +22,9 @@
     "eject": "react-scripts eject",
     "format": "prettier \"src/**/*.{jsx,js,html}\" --write",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prettier:base": "./node_modules/.bin/prettier --write",
+    "prettier": "npm run prettier:base -- '{*.{js,json,yaml,yml,md},src/**/*.{js,ts,tsx,css,json,yaml,yml,md}}'"
   },
   "eslintConfig": {
     "extends": "react-app"

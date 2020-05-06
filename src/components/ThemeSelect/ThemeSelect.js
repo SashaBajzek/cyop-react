@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react'
 
-import { ThemeContext } from "context";
-import "./ThemeSelect.scss";
-import { ThemeButton } from "./ThemeButton";
-import Sun from "./iconSVGS/Sun";
-import Crescent from "./iconSVGS/Crescent";
-import Rainbow from "./iconSVGS/Rainbow";
+import {ThemeContext} from 'context'
+import './ThemeSelect.scss'
+import {ThemeButton} from './ThemeButton'
+import Sun from './iconSVGS/Sun'
+import Crescent from './iconSVGS/Crescent'
+import Rainbow from './iconSVGS/Rainbow'
 
 const ThemeSelect = props => {
   const themeOptions = [
     {
       iconComponent: <Rainbow />,
-      value: "rainbow"
+      value: 'rainbow',
     },
     {
       iconComponent: <Crescent />,
-      value: "dark"
+      value: 'dark',
     },
     {
       iconComponent: <Sun />,
-      value: "light"
-    }
-  ];
+      value: 'light',
+    },
+  ]
   return (
     <ThemeContext.Consumer>
-      {({ theme }) => (
+      {({theme}) => (
         <>
           <form className={`ThemeSelect ThemeSelect--${theme}`}>
             <legend> Theme: </legend>
@@ -37,7 +37,7 @@ const ThemeSelect = props => {
         </>
       )}
     </ThemeContext.Consumer>
-  );
-};
+  )
+}
 
-export default ThemeSelect;
+export default ThemeSelect

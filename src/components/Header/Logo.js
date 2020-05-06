@@ -1,19 +1,11 @@
-import React from "react";
-import "./Logo.scss";
+import React from 'react'
+import './Logo.scss'
 
 function Logo(props) {
   return (
-    <svg
-      className={`Logo`}
-      width={72.348}
-      height={77.53}
-      viewBox="0 0 72.348 77.53"
-      {...props}
-    >
+    <svg className={`Logo`} width={72.348} height={77.53} viewBox="0 0 72.348 77.53" {...props}>
       <defs>
-        <style>
-          {".prefix__cls-2{fill:none;stroke:#61dafb;stroke-width:4px}"}
-        </style>
+        <style>{'.prefix__cls-2{fill:none;stroke:#61dafb;stroke-width:4px}'}</style>
       </defs>
       <g id="prefix__REACT_logo" transform="translate(13 14.257)">
         <circle
@@ -25,11 +17,7 @@ function Logo(props) {
           transform="translate(16.584 17.918)"
           fill="#61dafb"
         />
-        <g
-          id="prefix__Group_1"
-          data-name="Group 1"
-          transform="translate(-11 -11.525)"
-        >
+        <g id="prefix__Group_1" data-name="Group 1" transform="translate(-11 -11.525)">
           <ellipse
             id="prefix__Ellipse_2"
             data-name="Ellipse 2"
@@ -57,7 +45,7 @@ function Logo(props) {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default Logo;
+export default Logo

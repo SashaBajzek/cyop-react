@@ -1,23 +1,23 @@
-import React from "react";
-import { Link } from "@reach/router";
-import Logo from "./Logo";
-import "./Header.scss";
+import React from 'react'
+import {Link} from '@reach/router'
+import Logo from './Logo'
+import './Header.scss'
 
 class Header extends React.PureComponent {
-  state = { count: 1, prevTheme: this.props.theme };
+  state = {count: 1, prevTheme: this.props.theme}
 
   static getDerivedStateFromProps(props, state) {
     if (props.theme !== state.prevTheme) {
-      return { count: state.count + 1, prevTheme: props.theme };
+      return {count: state.count + 1, prevTheme: props.theme}
     }
     // Return null if the state hasn't changed
-    return null;
+    return null
   }
 
   render() {
-    console.log("HEADER RENDERING!");
-    const { count } = this.state;
-    const { theme } = this.props;
+    console.log('HEADER RENDERING!')
+    const {count} = this.state
+    const {theme} = this.props
     return (
       <header className={`Header Header--${theme}`}>
         <h1 className="Header__heading--main">
@@ -28,8 +28,8 @@ class Header extends React.PureComponent {
         <h2 className="Header__heading--secondary">React</h2>
         <span className="Header__counter">Header Render Counter: {count}</span>
       </header>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header

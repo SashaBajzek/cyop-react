@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Crescent(props) {
   return (
@@ -18,7 +18,7 @@ function Crescent(props) {
         strokeWidth={3}
       />
     </svg>
-  );
+  )
 }
 
-export default Crescent;
+export default Crescent

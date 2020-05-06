@@ -1,1 +1,1 @@
-export { default as TeachPage } from "./TeachPage";
+export {default as TeachPage} from './TeachPage'

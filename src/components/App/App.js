@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react'
 
-import { Footer, Header, Slide, ThemeSelect } from "components";
-import { ThemeContext } from "context";
-import "./App.scss";
+import {Footer, Header, Slide, ThemeSelect} from 'components'
+import {ThemeContext} from 'context'
+import './App.scss'
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       setTheme: newTheme => {
         this.setState({
-          theme: newTheme
-        });
+          theme: newTheme,
+        })
       },
-      theme: "light"
-    };
+      theme: 'light',
+    }
   }
 
   render() {
-    const { theme } = this.state;
+    const {theme} = this.state
     return (
       <React.StrictMode>
         <ThemeContext.Provider value={this.state}>
@@ -30,8 +30,8 @@ class App extends React.Component {
           </div>
         </ThemeContext.Provider>
       </React.StrictMode>
-    );
+    )
   }
 }
 
-export default App;
+export default App

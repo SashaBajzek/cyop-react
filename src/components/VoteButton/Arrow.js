@@ -1,5 +1,5 @@
-import React from "react";
-import "./Arrow.scss";
+import React from 'react'
+import './Arrow.scss'
 
 function Arrow(props) {
   return (
@@ -11,11 +11,7 @@ function Arrow(props) {
       {...props}
     >
       <defs>
-        <style>
-          {
-            ".prefix__cls-1{fill:none;stroke:#21142e;stroke-linecap:round;stroke-width:6px}"
-          }
-        </style>
+        <style>{'.prefix__cls-1{fill:none;stroke:#21142e;stroke-linecap:round;stroke-width:6px}'}</style>
       </defs>
       <g id="prefix__arrow" transform="translate(3 4.243)">
         <path
@@ -41,7 +37,7 @@ function Arrow(props) {
         />
       </g>
     </svg>
-  );
+  )
 }
 
-export default Arrow;
+export default Arrow

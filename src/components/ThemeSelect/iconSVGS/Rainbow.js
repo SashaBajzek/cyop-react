@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Rainbow(props) {
   return (
@@ -18,7 +18,7 @@ function Rainbow(props) {
         strokeWidth={10}
       />
     </svg>
-  );
+  )
 }
 
-export default Rainbow;
+export default Rainbow

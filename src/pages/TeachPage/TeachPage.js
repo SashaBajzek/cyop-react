@@ -1,43 +1,38 @@
-import React from "react";
-import pages from "../../fixtures/toc";
-import "./TeachPage.scss";
+import React from 'react'
+import pages from '../../fixtures/toc'
+import './TeachPage.scss'
 
 class TeachPage extends React.Component {
   componentDidMount() {
-    this.updateNextPage();
+    this.updateNextPage()
   }
 
   componentDidUpdate() {
-    this.updateNextPage();
+    this.updateNextPage()
   }
 
   updateNextPage = () => {
-    const { id, nextPage, setNextPage } = this.props;
-    const { nextUrl } = pages[id];
+    const {id, nextPage, setNextPage} = this.props
+    const {nextUrl} = pages[id]
     if (nextPage !== nextUrl) {
-      setNextPage(nextUrl);
+      setNextPage(nextUrl)
     }
-  };
+  }
 
   render() {
-    const { id, theme } = this.props;
-    const { bannerText, photos, text, title } = pages[id];
+    const {id, theme} = this.props
+    const {bannerText, photos, text, title} = pages[id]
     return (
       <div className="TeachPage">
         <h3 className="TeachPage__heading">{title}</h3>
         <main className="TeachPage__main">
-          {bannerText ? (
-            <p className="TeachPage__banner">{bannerText}</p>
-          ) : null}
+          {bannerText ? <p className="TeachPage__banner">{bannerText}</p> : null}
           {text ? (
             <ul className="TeachPage__list">
               {text.map(text => (
                 <li className="TeachPage__listItem" key={text.text}>
                   {text.link ? (
-                    <a
-                      className={`TeachPage__link TeachPage__link--${theme}`}
-                      href={text.link}
-                    >
+                    <a className={`TeachPage__link TeachPage__link--${theme}`} href={text.link}>
                       {text.text}
                     </a>
                   ) : (
@@ -50,23 +45,16 @@ class TeachPage extends React.Component {
           {photos ? (
             <div className={`TeachPage__image-container`}>
               {photos.map(photo => (
-                <div
-                  className={`TeachPage__image-wrapper TeachPage__image-wrapper--${theme}`}
-                  key={photo.alt}
-                >
-                  <img
-                    alt={photo.alt}
-                    className={`TeachPage__image`}
-                    src={photo.photo}
-                  />
+                <div className={`TeachPage__image-wrapper TeachPage__image-wrapper--${theme}`} key={photo.alt}>
+                  <img alt={photo.alt} className={`TeachPage__image`} src={photo.photo} />
                 </div>
               ))}
             </div>
           ) : null}
         </main>
       </div>
-    );
+    )
   }
 }
 
-export default TeachPage;
+export default TeachPage

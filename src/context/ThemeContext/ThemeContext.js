@@ -1,8 +1,8 @@
-import { createContext } from "react";
+import {createContext} from 'react'
 
 const ThemeContext = createContext({
-  theme: "rainbow",
-  setTheme: () => {}
-});
+  theme: 'rainbow',
+  setTheme: () => {},
+})
 
-export default ThemeContext;
+export default ThemeContext

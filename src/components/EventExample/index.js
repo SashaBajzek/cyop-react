@@ -1,1 +1,1 @@
-export { default as EventExample } from "./EventExample";
+export {default as EventExample} from './EventExample'

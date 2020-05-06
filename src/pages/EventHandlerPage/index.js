@@ -1,1 +1,1 @@
-export { default as EventHandlerPage } from "./EventHandlerPage";
+export {default as EventHandlerPage} from './EventHandlerPage'
